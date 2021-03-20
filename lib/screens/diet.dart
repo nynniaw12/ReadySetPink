@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
-import 'excercises.dart';
+import 'dart:math';
+import 'package:flutterexcercisesforcancerapp/constants.dart';
+import 'package:expandable/expandable.dart';
+import 'Diet_Days/Monday.dart';
 
 class DietWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Container(
         // No appBar property provided, only the body.
-        body: CustomScrollView(
+        child: CustomScrollView(
       slivers: <Widget>[
         SliverAppBar(
-          title: Text('Floating app bar'),
+          title: Text(
+            'The diet we are suggesting for the week:',
+            style: TextStyle(color: Colors.pink[500]),
+          ),
           // Allows the user to reveal the app bar if they begin scrolling back
           // up the list of items.
           floating: true,
@@ -17,16 +23,20 @@ class DietWidget extends StatelessWidget {
           expandedHeight: 50,
         ),
         SliverList(
-          // Use a delegate to build items as they're scrolled on screen.
-          delegate: SliverChildBuilderDelegate(
-            // The builder function returns a ListTile with a title that
-            // displays the index of the current item.
-            (context, index) => ListTile(title: Text('Item #$index')),
-            // Builds 1000 ListTiles
-            childCount: 1000,
-          ),
-        )
+            // Use a delegate to build items as they're scrolled on screen.
+            delegate: SliverChildListDelegate([
+          Monday("Monday", 0),
+          Monday("Tuesday", 1),
+        ]))
       ],
     ));
+  }
+}
+
+class UniqueColorGenerator {
+  static Random random = new Random();
+  static Color getColor() {
+    return Color.fromARGB(
+        255, random.nextInt(255), random.nextInt(255), random.nextInt(255));
   }
 }

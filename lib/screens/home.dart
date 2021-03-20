@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterexcercisesforcancerapp/screens/homeWidget.dart';
 import 'excercises.dart';
 import 'diet.dart';
 
@@ -12,9 +13,9 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int _currentIndex = 1;
   final List<Widget> _children = [
-    DietWidget(),
     PlaceholderWidget(Colors.deepOrange),
-    PlaceholderWidget(Colors.green)
+    HomeWidget(),
+    DietWidget()
   ];
   void onTabTapped(int index) {
     setState(() {
@@ -27,6 +28,8 @@ class _HomeState extends State<Home> {
     return Scaffold(
       body: _children[_currentIndex], // new
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.pink[200],
+        backgroundColor: Colors.black54,
         onTap: onTabTapped, // new
         currentIndex: _currentIndex, // new
         items: [
@@ -35,7 +38,7 @@ class _HomeState extends State<Home> {
             title: Text('Excercises'),
           ),
           new BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(Icons.favorite),
             title: Text('Home'),
           ),
           new BottomNavigationBarItem(
