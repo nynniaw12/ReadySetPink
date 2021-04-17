@@ -2,7 +2,7 @@ import 'dart:math' as math;
 
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
-import 'Meal.dart';
+import 'Excercise.dart';
 
 const loremIpsum =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
@@ -34,16 +34,16 @@ class _SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
   }
 }
 
-class Monday extends StatefulWidget {
+class Monday2 extends StatefulWidget {
   final String day;
   final int which;
-  Monday(this.day, this.which);
+  Monday2(this.day, this.which);
 
   @override
-  _MondayState createState() => _MondayState();
+  _Monday2State createState() => _Monday2State();
 }
 
-class _MondayState extends State<Monday> {
+class _Monday2State extends State<Monday2> {
   SliverPersistentHeader makeHeader(String headerText) {
     return SliverPersistentHeader(
       pinned: true,
@@ -92,38 +92,38 @@ class _MondayState extends State<Monday> {
                         height: 750,
                         child: CustomScrollView(
                           slivers: <Widget>[
-                            makeHeader('Breakfast'),
+                            makeHeader('Aerobic Exercises'),
                             SliverFixedExtentList(
                               itemExtent: 75,
                               delegate: SliverChildListDelegate(
                                 [
-                                  Meal(widget.which, 1, 0),
-                                  Meal(widget.which, 2, 1),
-                                  Meal(widget.which, 3, 2),
+                                  Excercise(widget.which, 1, 0),
+                                  Excercise(widget.which, 2, 1),
+                                  Excercise(widget.which, 3, 2),
                                 ],
                               ),
                             ),
-                            makeHeader('Lunch'),
+                            makeHeader('Resistance Exercises'),
                             SliverFixedExtentList(
                               itemExtent: 75,
                               delegate: SliverChildListDelegate(
                                 [
-                                  Meal(widget.which + 1, 1, 0),
-                                  Meal(widget.which + 1, 2, 1),
-                                  Meal(widget.which + 1, 3, 2),
-                                  Meal(widget.which + 1, 4, 3),
+                                  Excercise(widget.which + 1, 1, 0),
+                                  Excercise(widget.which + 1, 2, 1),
+                                  Excercise(widget.which + 1, 3, 2),
+                                  Excercise(widget.which + 1, 4, 3),
                                 ],
                               ),
                             ),
-                            makeHeader('Dinner'),
+                            makeHeader('Meditation'),
                             SliverFixedExtentList(
                               itemExtent: 75,
                               delegate: SliverChildListDelegate(
                                 [
-                                  Meal(widget.which + 2, 1, 0),
-                                  Meal(widget.which + 2, 2, 1),
-                                  Meal(widget.which + 2, 3, 2),
-                                  Meal(widget.which + 2, 4, 3),
+                                  Excercise(widget.which + 2, 1, 0),
+                                  Excercise(widget.which + 2, 2, 1),
+                                  Excercise(widget.which + 2, 3, 2),
+                                  Excercise(widget.which + 2, 4, 3),
                                 ],
                               ),
                             ),

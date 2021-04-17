@@ -8,13 +8,12 @@ class DietWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        // No appBar property provided, only the body.
         child: CustomScrollView(
       slivers: <Widget>[
         SliverAppBar(
           title: Text(
             'The diet we are suggesting for the week:',
-            style: TextStyle(color: Colors.pink[500]),
+            style: TextStyle(color: Colors.grey[100], fontSize: 16),
           ),
           // Allows the user to reveal the app bar if they begin scrolling back
           // up the list of items.
@@ -26,7 +25,12 @@ class DietWidget extends StatelessWidget {
             // Use a delegate to build items as they're scrolled on screen.
             delegate: SliverChildListDelegate([
           Monday("Monday", 0),
-          Monday("Tuesday", 1),
+          Monday("Tuesday", 0),
+          Monday("Wednesday", 0),
+          Monday("Thursday", 0),
+          Monday("Friday", 0),
+          Monday("Saturday", 0),
+          Monday("Sunday", 0),
         ]))
       ],
     ));

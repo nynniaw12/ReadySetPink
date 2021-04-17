@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutterexcercisesforcancerapp/constants.dart';
 
-class Details extends StatelessWidget {
+class Excercisesguide extends StatelessWidget {
   final int dd;
-  Details(this.dd);
+  Excercisesguide(this.dd);
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -12,7 +12,7 @@ class Details extends StatelessWidget {
           children: <Widget>[
             Positioned.fill(
               child: Image.network(
-                recipes1[dd]['img'],
+                excercises1[dd]['img'],
                 fit: BoxFit.cover,
                 color: Colors.black38,
                 colorBlendMode: BlendMode.darken,
@@ -36,7 +36,7 @@ class Details extends StatelessWidget {
               left: 15,
               right: 15,
               child: Container(
-                height: MediaQuery.of(context).size.height / 1.65,
+                height: MediaQuery.of(context).size.height / 2.5,
                 padding: EdgeInsets.all(25),
                 decoration: BoxDecoration(
                   color: Colors.white24,
@@ -48,7 +48,7 @@ class Details extends StatelessWidget {
                       Row(
                         children: <Widget>[
                           Text(
-                            "${recipes1[dd]['name']}",
+                            "${excercises1[dd]['name']}",
                             style: Theme.of(context)
                                 .textTheme
                                 .headline
@@ -65,33 +65,10 @@ class Details extends StatelessWidget {
                         ],
                       ),
                       SizedBox(height: 15),
-                      Container(
-                        height: 35,
-                        child: ListView.builder(
-                          scrollDirection: Axis.horizontal,
-                          itemCount: recipes1[dd]['ingredients'].length,
-                          itemBuilder: (ctx, i) {
-                            return Container(
-                              padding: const EdgeInsets.all(9.0),
-                              alignment: Alignment.center,
-                              margin: EdgeInsets.only(right: 15.0),
-                              decoration: BoxDecoration(
-                                color: Colors.black54,
-                                borderRadius: BorderRadius.circular(25.0),
-                              ),
-                              child: Text(
-                                "${recipes1[dd]['ingredients'][i]}",
-                                style: TextStyle(color: Colors.white),
-                              ),
-                            );
-                          },
-                        ),
-                      ),
-                      SizedBox(height: 15),
                       Row(
                         children: <Widget>[
                           Text(
-                            "Difficulty: " + "${recipes1[dd]['difficulty']}",
+                            "Difficulty: " + "${excercises1[dd]['difficulty']}",
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
@@ -102,38 +79,8 @@ class Details extends StatelessWidget {
                       ),
                       SizedBox(height: 15),
                       Text(
-                        "${recipes1[dd]['desc']}",
+                        "${excercises1[dd]['desc']}",
                         style: TextStyle(color: Colors.white, fontSize: 15),
-                      ),
-                      SizedBox(height: 15),
-                      GridView.count(
-                        crossAxisCount: 2,
-                        shrinkWrap: true,
-                        childAspectRatio: 5,
-                        children: List.generate(
-                          recipes1[dd]['ingredients'].length,
-                          (f) {
-                            return Row(
-                              children: <Widget>[
-                                Text(
-                                  "${recipes1[dd]['ingredients'][f]}: ",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 17,
-                                  ),
-                                ),
-                                Text(
-                                  "$f kg",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 17,
-                                  ),
-                                )
-                              ],
-                            );
-                          },
-                        ),
                       ),
                       SizedBox(height: 15),
                       Row(
@@ -148,7 +95,7 @@ class Details extends StatelessWidget {
                                 color: Colors.black54,
                                 borderRadius: BorderRadius.circular(5.0),
                               ),
-                              child: Text("${recipes1[dd]['duration']}",
+                              child: Text("${excercises1[dd]['duration']}",
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 15)),
                             ),
@@ -162,7 +109,7 @@ class Details extends StatelessWidget {
                                 color: Colors.black54,
                                 borderRadius: BorderRadius.circular(5.0),
                               ),
-                              child: Text("${recipes1[dd]['temp']}",
+                              child: Text("${excercises1[dd]['temp']}",
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 15)),
                             ),
@@ -175,9 +122,9 @@ class Details extends StatelessWidget {
                                 color: Colors.black54,
                                 borderRadius: BorderRadius.circular(5.0),
                               ),
-                              child: Text("${recipes1[dd]['cooking_type']}",
+                              child: Text("${excercises1[dd]['cooking_type']}",
                                   style: TextStyle(
-                                      color: Colors.white, fontSize: 15)),
+                                      color: Colors.white, fontSize: 12)),
                             ),
                           ),
                         ],
