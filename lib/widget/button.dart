@@ -13,7 +13,7 @@ class _ButtonLoginState extends State<ButtonLogin> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 40, right: 50, left: 200),
+      padding: const EdgeInsets.only(top: 40, right: 50, left: 50),
       child: Container(
         alignment: Alignment.bottomRight,
         height: 50,
@@ -33,7 +33,7 @@ class _ButtonLoginState extends State<ButtonLogin> {
           color: Colors.white,
           borderRadius: BorderRadius.circular(30),
         ),
-        child: FlatButton(
+        child: TextButton(
           onPressed: () {
             if (enteredTextLogin == "patient" && enteredTextPass == "pass") {
               Navigator.push(

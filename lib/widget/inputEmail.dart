@@ -16,6 +16,7 @@ class _InputEmailState extends State<InputEmail> {
         height: 60,
         width: MediaQuery.of(context).size.width,
         child: TextField(
+          cursorColor: Colors.pink[500],
           onChanged: (newText) {
             enteredTextLogin = newText;
           },
@@ -23,11 +24,12 @@ class _InputEmailState extends State<InputEmail> {
             color: Colors.white,
           ),
           decoration: InputDecoration(
+            
             border: InputBorder.none,
             fillColor: Colors.lightBlueAccent,
             labelText: 'Username',
             labelStyle: TextStyle(
-              color: Colors.white70,
+              color: Colors.white,
             ),
           ),
         ),

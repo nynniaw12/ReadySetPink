@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notifications_platform_interface/flutter_local_notifications_platform_interface.dart';
 import 'package:flutterexcercisesforcancerapp/screens/homeWidget.dart';
 import 'excercises.dart';
 import 'diet.dart';
@@ -6,7 +7,7 @@ import 'Settings.dart';
 import 'Account.dart';
 import 'Login.dart';
 import 'dart:async';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+//import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -16,7 +17,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin;
+  FlutterLocalNotificationsPlatform flutterLocalNotificationsPlatform;
+  //FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin;
 
   Timer _timer;
   bool visibilityMot = true;
@@ -39,12 +41,12 @@ class _HomeState extends State<Home> {
   void initState() {
     super.initState();
 
-    flutterLocalNotificationsPlugin = new FlutterLocalNotificationsPlugin();
+    /*flutterLocalNotificationsPlugin = new FlutterLocalNotificationsPlugin();
     var android = new AndroidInitializationSettings('@mipmap/ic_launcher');
     var iOS = new IOSInitializationSettings();
     var initSetttings = new InitializationSettings(android, iOS);
     flutterLocalNotificationsPlugin.initialize(initSetttings,
-        onSelectNotification: onSelectNotification);
+        onSelectNotification: onSelectNotification);*/
 
     visibilityMot2 = true;
     visibilityMot = true;
@@ -222,13 +224,15 @@ class _HomeState extends State<Home> {
   }
 
   showNotification() async {
-    var android = new AndroidNotificationDetails(
+    /*var android = new AndroidNotificationDetails(
         'channel id', 'channel NAME', 'CHANNEL DESCRIPTION',
         priority: Priority.High, importance: Importance.Max);
     var iOS = new IOSNotificationDetails();
     var platform = new NotificationDetails(android, iOS);
     await flutterLocalNotificationsPlugin.show(
         0, 'New Tutorial', 'Local Notification', platform,
-        payload: 'AndroidCoding.in');
+        payload: 'AndroidCoding.in');*/
+
+    flutterLocalNotificationsPlatform.show(0,'New Tutorial',  'Local Notification');
   }
 }

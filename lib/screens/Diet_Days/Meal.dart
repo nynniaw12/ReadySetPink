@@ -33,64 +33,71 @@ class _MealState extends State<Meal> {
     // NOTE: Calling this function here would crash the app.
     setState(() {
       _bb = widget.bbstart;
-      if (widget.index % 2 == 0) {
+      primaryColor = const Color(0xFFffd4e6);
+      /*if (widget.index % 2 == 0) {
         primaryColor = const Color(0xFFffd4e6);
       } else {
         primaryColor = const Color(0xFFffd4a8);
-      }
+      }*/
       _colorContainer = primaryColor;
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return Slidable(
-      actionPane: SlidableDrawerActionPane(),
-      actionExtentRatio: 0.25,
-      child: Ink(
-          child: InkWell(
-        child: Container(
-          color: _colorContainer,
-          height: 75,
-          child: ListTile(
-            leading: CircleAvatar(
-              backgroundColor: const Color(0xFFCF268A),
-              child: Text('${widget.index}'),
-              foregroundColor: Colors.white,
+    return Container(
+      margin: EdgeInsets.all(5),
+      //color: _colorContainer,
+      child: ClipRRect(
+        borderRadius: BorderRadius.all(new Radius.circular(20)),
+            child: Container(
+              color: _colorContainer,
+              child: Slidable(
+                actionPane: SlidableDrawerActionPane(),
+                actionExtentRatio: 0.25,
+                child: Ink(
+                    child: InkWell(
+                  child: ListTile(
+                    leading: CircleAvatar(
+                      backgroundColor: const Color(0xFFCF268A),
+                      child: Text('${widget.index}'),
+                      foregroundColor: Colors.white,
+                    ),
+                    title: Text("${listrecipes[widget.which][_bb]['name']}",
+                        style: TextStyle(color: Colors.grey[850])),
+                    subtitle: Text("${listrecipes[widget.which][_bb]['shortdesc']}",
+                        style: TextStyle(color: const Color(0xFF4f4f4f))),
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Details(_bb)),
+                    );
+                  },
+                )),
+                secondaryActions: <Widget>[
+                  IconSlideAction(
+                    caption: 'Suggest new',
+                    color: Colors.black45,
+                    icon: Icons.more_horiz,
+                    onTap: () => suggestNew(),
+                  ),
+                  IconSlideAction(
+                    caption: 'Eaten/Uneaten',
+                    color: Colors.red,
+                    icon: Icons.swap_horiz_rounded,
+                    onTap: () {
+                      setState(() {
+                        _colorContainer = _colorContainer == Color(0xFFff83ad)
+                            ? primaryColor
+                            : const Color(0xFFff83ad);
+                      });
+                    },
+                  ),
+                ],
+              ),
             ),
-            title: Text("${listrecipes[widget.which][_bb]['name']}",
-                style: TextStyle(color: Colors.grey[850])),
-            subtitle: Text("${listrecipes[widget.which][_bb]['shortdesc']}",
-                style: TextStyle(color: const Color(0xFF4f4f4f))),
-          ),
-        ),
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => Details(_bb)),
-          );
-        },
-      )),
-      secondaryActions: <Widget>[
-        IconSlideAction(
-          caption: 'Suggest new',
-          color: Colors.black45,
-          icon: Icons.more_horiz,
-          onTap: () => suggestNew(),
-        ),
-        IconSlideAction(
-          caption: 'Eaten/Uneaten',
-          color: Colors.red,
-          icon: Icons.swap_horiz_rounded,
-          onTap: () {
-            setState(() {
-              _colorContainer = _colorContainer == Color(0xFFff83ad)
-                  ? primaryColor
-                  : const Color(0xFFff83ad);
-            });
-          },
-        ),
-      ],
+      ),
     );
   }
 }
