@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterexcercisesforcancerapp/screens/homeWidget.dart';
+import 'calendar.dart';
 import 'excercises.dart';
 import 'diet.dart';
 import 'Settings.dart';
@@ -18,7 +19,8 @@ class _HomeState extends State<Home> {
   final List<Widget> _children = [
     ExcerciseWidget(),
     HomeWidget(),
-    DietWidget()
+    DietWidget(),
+    CalendarWidget()
   ];
   void onTabTapped(int index) {
     setState(() {
@@ -127,7 +129,12 @@ class _HomeState extends State<Home> {
             title: Text('Home'),
           ),
           new BottomNavigationBarItem(
-              icon: Icon(Icons.food_bank), title: Text('Diet'))
+              icon: Icon(Icons.food_bank),
+              title: Text('Diet')),
+          new BottomNavigationBarItem(
+            icon: Icon(Icons.calendar_today),
+            title: Text('Calendar'),
+          )
         ],
       ),
     );
