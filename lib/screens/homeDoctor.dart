@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutterexcercisesforcancerapp/screens/DoctorScreens/homeWidgetDoctor.dart';
 import 'package:flutterexcercisesforcancerapp/screens/DoctorScreens/patientsWidgetDoctor.dart';
 import 'Settings.dart';
 import 'Account.dart';
 import 'Login.dart';
+import 'package:flutterexcercisesforcancerapp/profile/components/body.dart';
 
 class HomeDoctor extends StatefulWidget {
   @override
@@ -15,7 +15,7 @@ class HomeDoctor extends StatefulWidget {
 class _HomeDoctorState extends State<HomeDoctor> {
   int _currentIndex = 0;
   final List<Widget> _children = [
-    HomeWidgetDoctor(),
+    Body(),
     PatientsWidget(),
   ];
   void onTabTapped(int index) {
