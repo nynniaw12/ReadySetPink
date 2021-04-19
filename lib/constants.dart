@@ -154,7 +154,8 @@ List<Map<String, dynamic>> excercises1 = [
     'duration': '30 mins',
     'temp': '3 sets',
     'cooking_type': '5 times each set',
-    'shortdesc': 'Example short description for aerobic excercise #1',
+    'shortdesc':
+        'Example short description for aerobic excercise #1  - 0/10 secs done',
   },
   {
     'name': 'Aerobic Excercise #2',
@@ -166,7 +167,8 @@ List<Map<String, dynamic>> excercises1 = [
     'duration': '30 mins',
     'temp': '180 °',
     'cooking_type': 'Oven',
-    'shortdesc': 'Example short description for aerobic excercise #2',
+    'shortdesc':
+        'Example short description for aerobic excercise #2 - 0/15 mins done',
   },
   {
     'name': 'Aerobic Excercise #3',
@@ -178,7 +180,8 @@ List<Map<String, dynamic>> excercises1 = [
     'duration': '30 mins',
     'temp': '180 °',
     'cooking_type': 'Oven',
-    'shortdesc': 'Example short description for aerobic excercise #3',
+    'shortdesc':
+        'Example short description for aerobic excercise #3 - 0/10 mins done',
   },
 ];
 List<Map<String, dynamic>> excercises2 = [
@@ -192,7 +195,8 @@ List<Map<String, dynamic>> excercises2 = [
     'duration': '30 mins',
     'temp': '180 °',
     'cooking_type': 'Oven',
-    'shortdesc': 'Example short description for resistance excercise #1',
+    'shortdesc':
+        'Example short description for resistance excercise #1 - 0/10 mins done',
   },
   {
     'name': 'Resistance Excercise #2',
@@ -204,7 +208,8 @@ List<Map<String, dynamic>> excercises2 = [
     'duration': '30 mins',
     'temp': '180 °',
     'cooking_type': 'Oven',
-    'shortdesc': 'Example short description for resistance excercise #2',
+    'shortdesc':
+        'Example short description for resistance excercise #2 - 0/10 mins done',
   },
   {
     'name': 'Resistance Excercise #3',
@@ -216,7 +221,8 @@ List<Map<String, dynamic>> excercises2 = [
     'duration': '30 mins',
     'temp': '180 °',
     'cooking_type': 'Oven',
-    'shortdesc': 'Example short description for resistance excercise #3',
+    'shortdesc':
+        'Example short description for resistance excercise #3 - 0/10 mins done',
   },
   {
     'name': 'Resistance Excercise #4',
@@ -228,7 +234,8 @@ List<Map<String, dynamic>> excercises2 = [
     'duration': '30 mins',
     'temp': '180 °',
     'cooking_type': 'Oven',
-    'shortdesc': 'Example short description for resistance excercise #4',
+    'shortdesc':
+        'Example short description for resistance excercise #4 - 0/10 mins done',
   },
 ];
 List<Map<String, dynamic>> excercises3 = [
@@ -242,7 +249,7 @@ List<Map<String, dynamic>> excercises3 = [
     'duration': '30 mins',
     'temp': '180 °',
     'cooking_type': 'Oven',
-    'shortdesc': 'Example short description for Meditation #1',
+    'shortdesc': 'Example short description for Meditation #1 - 0/5 mins done',
   },
   {
     'name': 'Meditation #2',
@@ -254,7 +261,8 @@ List<Map<String, dynamic>> excercises3 = [
     'duration': '30 mins',
     'temp': '180 °',
     'cooking_type': 'Oven',
-    'shortdesc': 'Example short description for Meditation #2',
+    'shortdesc':
+        'Example short description for Meditation #2 - 0/2.5 mins done',
   },
   {
     'name': 'Meditation #3',
@@ -266,7 +274,7 @@ List<Map<String, dynamic>> excercises3 = [
     'duration': '30 mins',
     'temp': '180 °',
     'cooking_type': 'Oven',
-    'shortdesc': 'Example short description for Meditation #3',
+    'shortdesc': 'Example short description for Meditation #3 - 0/5 mins done',
   },
   {
     'name': 'Meditation #4',

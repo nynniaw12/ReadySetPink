@@ -51,7 +51,12 @@ class _MondayState extends State<Monday> {
         minHeight: 60.0,
         maxHeight: 100.0,
         child: Container(
-            color: const Color(0xFFd888d8),
+            decoration: BoxDecoration(
+              color: const Color(0xFFd888d8),
+              border: Border.all(
+                color: const Color(0xFFd888d8),
+              ),
+            ),
             child: Center(
                 child: Text(
               headerText,
@@ -67,85 +72,96 @@ class _MondayState extends State<Monday> {
         child: Padding(
       padding: const EdgeInsets.only(left: 10, right: 10, bottom: 5, top: 5),
       child: Card(
-        clipBehavior: Clip.antiAlias,
-        child: Column(
-          children: <Widget>[
-            ScrollOnExpand(
-              scrollOnExpand: true,
-              scrollOnCollapse: false,
-              child: ExpandablePanel(
-                theme: const ExpandableThemeData(
-                  headerAlignment: ExpandablePanelHeaderAlignment.center,
-                  tapBodyToCollapse: true,
-                ),
-                header: Padding(
-                    padding: EdgeInsets.all(10),
-                    child: Text(
-                      widget.day,
-                      style: Theme.of(context).textTheme.body2,
-                    )),
-                collapsed: Container(),
-                expanded: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Container(
-                        height: 750,
-                        child: CustomScrollView(
-                          slivers: <Widget>[
-                            makeHeader('Breakfast'),
-                            SliverFixedExtentList(
-                              itemExtent: 75,
-                              delegate: SliverChildListDelegate(
-                                [
-                                  Meal(widget.which, 1, 0),
-                                  Meal(widget.which, 2, 1),
-                                  Meal(widget.which, 3, 2),
-                                ],
-                              ),
-                            ),
-                            makeHeader('Lunch'),
-                            SliverFixedExtentList(
-                              itemExtent: 75,
-                              delegate: SliverChildListDelegate(
-                                [
-                                  Meal(widget.which + 1, 1, 0),
-                                  Meal(widget.which + 1, 2, 1),
-                                  Meal(widget.which + 1, 3, 2),
-                                  Meal(widget.which + 1, 4, 3),
-                                ],
-                              ),
-                            ),
-                            makeHeader('Dinner'),
-                            SliverFixedExtentList(
-                              itemExtent: 75,
-                              delegate: SliverChildListDelegate(
-                                [
-                                  Meal(widget.which + 2, 1, 0),
-                                  Meal(widget.which + 2, 2, 1),
-                                  Meal(widget.which + 2, 3, 2),
-                                  Meal(widget.which + 2, 4, 3),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ))
-                  ],
-                ),
-                builder: (_, collapsed, expanded) {
-                  return Padding(
-                    padding: EdgeInsets.only(left: 10, right: 10, bottom: 0),
-                    child: Expandable(
-                      collapsed: collapsed,
-                      expanded: expanded,
-                      theme: const ExpandableThemeData(crossFadePoint: 0),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15.0),
+          ),
+          clipBehavior: Clip.antiAlias,
+          child: Container(
+            decoration: BoxDecoration(
+                gradient: LinearGradient(colors: [Colors.green, Colors.blue])),
+            child: Column(
+              children: <Widget>[
+                ScrollOnExpand(
+                  scrollOnExpand: true,
+                  scrollOnCollapse: false,
+                  child: ExpandablePanel(
+                    theme: const ExpandableThemeData(
+                      headerAlignment: ExpandablePanelHeaderAlignment.center,
+                      tapBodyToCollapse: true,
                     ),
-                  );
-                },
-              ),
+                    header: Padding(
+                        padding: EdgeInsets.all(10),
+                        child: Text(
+                          widget.day,
+                          style: Theme.of(context).textTheme.body2,
+                        )),
+                    collapsed: Container(),
+                    expanded: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Container(
+                            height: 750,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(15),
+                              child: CustomScrollView(
+                                slivers: <Widget>[
+                                  makeHeader('Breakfast'),
+                                  SliverFixedExtentList(
+                                    itemExtent: 75,
+                                    delegate: SliverChildListDelegate(
+                                      [
+                                        Meal(widget.which, 1, 0),
+                                        Meal(widget.which, 2, 1),
+                                        Meal(widget.which, 3, 2),
+                                      ],
+                                    ),
+                                  ),
+                                  makeHeader('Lunch'),
+                                  SliverFixedExtentList(
+                                    itemExtent: 75,
+                                    delegate: SliverChildListDelegate(
+                                      [
+                                        Meal(widget.which + 1, 1, 0),
+                                        Meal(widget.which + 1, 2, 1),
+                                        Meal(widget.which + 1, 3, 2),
+                                        Meal(widget.which + 1, 4, 3),
+                                      ],
+                                    ),
+                                  ),
+                                  makeHeader('Dinner'),
+                                  SliverFixedExtentList(
+                                    itemExtent: 75,
+                                    delegate: SliverChildListDelegate(
+                                      [
+                                        Meal(widget.which + 2, 1, 0),
+                                        Meal(widget.which + 2, 2, 1),
+                                        Meal(widget.which + 2, 3, 2),
+                                        Meal(widget.which + 2, 4, 3),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            )),
+                        Padding(padding: EdgeInsets.only(bottom: 20))
+                      ],
+                    ),
+                    builder: (_, collapsed, expanded) {
+                      return Padding(
+                        padding:
+                            EdgeInsets.only(left: 10, right: 10, bottom: 0),
+                        child: Expandable(
+                          collapsed: collapsed,
+                          expanded: expanded,
+                          theme: const ExpandableThemeData(crossFadePoint: 0),
+                        ),
+                      );
+                    },
+                  ),
+                ),
+              ],
             ),
-          ],
-        ),
-      ),
+          )),
     ));
   }
 }

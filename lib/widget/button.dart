@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutterexcercisesforcancerapp/screens/home.dart';
+import 'package:flutterexcercisesforcancerapp/screens/homeDoctor.dart';
+import 'package:flutterexcercisesforcancerapp/widget/inputEmail.dart';
+import 'package:flutterexcercisesforcancerapp/widget/password.dart';
 
 class ButtonLogin extends StatefulWidget {
   @override
@@ -30,7 +34,16 @@ class _ButtonLoginState extends State<ButtonLogin> {
           borderRadius: BorderRadius.circular(30),
         ),
         child: FlatButton(
-          onPressed: () {},
+          onPressed: () {
+            if (enteredTextLogin == "patient" && enteredTextPass == "pass") {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Home()));
+            }
+            if (enteredTextLogin == "doctor" && enteredTextPass == "pass") {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => HomeDoctor()));
+            } else {}
+          },
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[

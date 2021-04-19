@@ -5,6 +5,8 @@ class InputEmail extends StatefulWidget {
   _InputEmailState createState() => _InputEmailState();
 }
 
+String enteredTextLogin;
+
 class _InputEmailState extends State<InputEmail> {
   @override
   Widget build(BuildContext context) {
@@ -14,13 +16,16 @@ class _InputEmailState extends State<InputEmail> {
         height: 60,
         width: MediaQuery.of(context).size.width,
         child: TextField(
+          onChanged: (newText) {
+            enteredTextLogin = newText;
+          },
           style: TextStyle(
             color: Colors.white,
           ),
           decoration: InputDecoration(
             border: InputBorder.none,
             fillColor: Colors.lightBlueAccent,
-            labelText: 'Name',
+            labelText: 'Username',
             labelStyle: TextStyle(
               color: Colors.white70,
             ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterexcercisesforcancerapp/screens/Login.dart';
 import 'screens/home.dart';
 
 void main() => runApp(App());
@@ -22,7 +23,7 @@ class App extends StatelessWidget {
          ThemeMode.dark for dark theme
       */
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      home: LoginPage(),
     );
   }
 }

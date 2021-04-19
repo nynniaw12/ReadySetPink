@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterexcercisesforcancerapp/constants.dart';
+import 'package:flutterexcercisesforcancerapp/screens/Excercises_Days/Excercising.dart';
 
 class Excercisesguide extends StatelessWidget {
   final int dd;
@@ -57,10 +58,17 @@ class Excercisesguide extends StatelessWidget {
                           Spacer(),
                           IconButton(
                             icon: Icon(
-                              Icons.favorite_border,
+                              Icons.play_arrow,
+                              size: 35,
                               color: Colors.white,
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Excercising(dd)),
+                              );
+                            },
                           )
                         ],
                       ),

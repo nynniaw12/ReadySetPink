@@ -14,7 +14,7 @@ class Meal extends StatefulWidget {
 
 class _MealState extends State<Meal> {
   int _bb;
-
+  Color primaryColor;
   suggestNew() {
     setState(() {
       if (_bb == listrecipes[widget.which].length - 1) {
@@ -25,7 +25,7 @@ class _MealState extends State<Meal> {
     });
   }
 
-  Color _colorContainer = const Color(0xFFffd4e6);
+  Color _colorContainer;
 
   @override
   void initState() {
@@ -33,6 +33,12 @@ class _MealState extends State<Meal> {
     // NOTE: Calling this function here would crash the app.
     setState(() {
       _bb = widget.bbstart;
+      if (widget.index % 2 == 0) {
+        primaryColor = const Color(0xFFffd4e6);
+      } else {
+        primaryColor = const Color(0xFFffd4a8);
+      }
+      _colorContainer = primaryColor;
     });
   }
 
@@ -79,7 +85,7 @@ class _MealState extends State<Meal> {
           onTap: () {
             setState(() {
               _colorContainer = _colorContainer == Color(0xFFff83ad)
-                  ? const Color(0xFFffd4e6)
+                  ? primaryColor
                   : const Color(0xFFff83ad);
             });
           },

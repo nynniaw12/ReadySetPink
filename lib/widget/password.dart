@@ -5,6 +5,8 @@ class PasswordInput extends StatefulWidget {
   _PasswordInputState createState() => _PasswordInputState();
 }
 
+String enteredTextPass;
+
 class _PasswordInputState extends State<PasswordInput> {
   @override
   Widget build(BuildContext context) {
@@ -14,6 +16,9 @@ class _PasswordInputState extends State<PasswordInput> {
         height: 60,
         width: MediaQuery.of(context).size.width,
         child: TextField(
+          onChanged: (newText) {
+            enteredTextPass = newText;
+          },
           style: TextStyle(
             color: Colors.white,
           ),
