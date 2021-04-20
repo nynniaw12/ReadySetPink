@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterexcercisesforcancerapp/screens/Login.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'screens/home.dart';
 import './screens/diet.dart';
 
