@@ -38,53 +38,59 @@ class _ExcerciseState extends State<Excercise> {
 
   @override
   Widget build(BuildContext context) {
-    return Slidable(
-      actionPane: SlidableDrawerActionPane(),
-      actionExtentRatio: 0.25,
-      child: Ink(
-          child: InkWell(
+    return Container(
+      margin: EdgeInsets.all(5),
+      child: ClipRRect(
+        borderRadius: BorderRadius.all(new Radius.circular(20)),
         child: Container(
           color: _colorContainer,
-          height: 75,
-          child: ListTile(
-            leading: CircleAvatar(
-              backgroundColor: const Color(0xFFCF268A),
-              child: Text('${widget.index}'),
-              foregroundColor: Colors.white,
-            ),
-            title: Text("${listexcercises[widget.which][_bb]['name']}",
-                style: TextStyle(color: Colors.grey[850])),
-            subtitle: Text("${listexcercises[widget.which][_bb]['shortdesc']}",
-                style: TextStyle(color: const Color(0xFF4f4f4f))),
+          child: Slidable(
+            actionPane: SlidableDrawerActionPane(),
+            actionExtentRatio: 0.25,
+            child: Ink(
+                child: InkWell(
+              child: ListTile(
+                leading: CircleAvatar(
+                  backgroundColor: const Color(0xFFC33187),
+                  child: Text('${widget.index}'),
+                  foregroundColor: Colors.white,
+                ),
+                title: Text("${listexcercises[widget.which][_bb]['name']}",
+                    style: TextStyle(color: Colors.grey[850])),
+                subtitle: Text(
+                    "${listexcercises[widget.which][_bb]['shortdesc']}",
+                    style: TextStyle(color: const Color(0xFF4f4f4f))),
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Excercisesguide(_bb)),
+                );
+              },
+            )),
+            secondaryActions: <Widget>[
+              IconSlideAction(
+                caption: 'Suggest new',
+                color: Color(0xFF993FFF),
+                icon: Icons.more_horiz,
+                onTap: () => suggestNew(),
+              ),
+              IconSlideAction(
+                caption: 'Done/Undone',
+                color: Color(0xFFFF722E),
+                icon: Icons.swap_horiz_rounded,
+                onTap: () {
+                  setState(() {
+                    _colorContainer = _colorContainer == Color(0xFFff83ad)
+                        ? const Color(0xFFFFC2C2)
+                        : const Color(0xFFff83ad);
+                  });
+                },
+              ),
+            ],
           ),
         ),
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => Excercisesguide(_bb)),
-          );
-        },
-      )),
-      secondaryActions: <Widget>[
-        IconSlideAction(
-          caption: 'Suggest new',
-          color: Colors.black45,
-          icon: Icons.more_horiz,
-          onTap: () => suggestNew(),
-        ),
-        IconSlideAction(
-          caption: 'Done/Undone',
-          color: Colors.red,
-          icon: Icons.swap_horiz_rounded,
-          onTap: () {
-            setState(() {
-              _colorContainer = _colorContainer == Color(0xFFff83ad)
-                  ? const Color(0xFFffd4e6)
-                  : const Color(0xFFff83ad);
-            });
-          },
-        ),
-      ],
+      ),
     );
   }
 }

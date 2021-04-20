@@ -51,7 +51,7 @@ class _Monday2State extends State<Monday2> {
         minHeight: 60.0,
         maxHeight: 100.0,
         child: Container(
-            color: const Color(0xFFd888d8),
+            color: Color(0xffff2e63),
             child: Center(
                 child: Text(
               headerText,
@@ -67,83 +67,87 @@ class _Monday2State extends State<Monday2> {
         child: Padding(
       padding: const EdgeInsets.only(left: 10, right: 10, bottom: 5, top: 5),
       child: Card(
-        clipBehavior: Clip.antiAlias,
-        child: Column(
-          children: <Widget>[
-            ScrollOnExpand(
-              scrollOnExpand: true,
-              scrollOnCollapse: false,
-              child: ExpandablePanel(
-                theme: const ExpandableThemeData(
-                  headerAlignment: ExpandablePanelHeaderAlignment.center,
-                  tapBodyToCollapse: true,
-                ),
-                header: Padding(
-                    padding: EdgeInsets.all(10),
-                    child: Text(
-                      widget.day,
-                      style: Theme.of(context).textTheme.body2,
-                    )),
-                collapsed: Container(),
-                expanded: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Container(
-                        height: 750,
-                        child: CustomScrollView(
-                          slivers: <Widget>[
-                            makeHeader('Aerobic Exercises'),
-                            SliverFixedExtentList(
-                              itemExtent: 75,
-                              delegate: SliverChildListDelegate(
-                                [
-                                  Excercise(widget.which, 1, 0),
-                                  Excercise(widget.which, 2, 1),
-                                  Excercise(widget.which, 3, 2),
-                                ],
-                              ),
-                            ),
-                            makeHeader('Resistance Exercises'),
-                            SliverFixedExtentList(
-                              itemExtent: 75,
-                              delegate: SliverChildListDelegate(
-                                [
-                                  Excercise(widget.which + 1, 1, 0),
-                                  Excercise(widget.which + 1, 2, 1),
-                                  Excercise(widget.which + 1, 3, 2),
-                                  Excercise(widget.which + 1, 4, 3),
-                                ],
-                              ),
-                            ),
-                            makeHeader('Meditation'),
-                            SliverFixedExtentList(
-                              itemExtent: 75,
-                              delegate: SliverChildListDelegate(
-                                [
-                                  Excercise(widget.which + 2, 1, 0),
-                                  Excercise(widget.which + 2, 2, 1),
-                                  Excercise(widget.which + 2, 3, 2),
-                                  Excercise(widget.which + 2, 4, 3),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ))
-                  ],
-                ),
-                builder: (_, collapsed, expanded) {
-                  return Padding(
-                    padding: EdgeInsets.only(left: 10, right: 10, bottom: 0),
-                    child: Expandable(
-                      collapsed: collapsed,
-                      expanded: expanded,
-                      theme: const ExpandableThemeData(crossFadePoint: 0),
-                    ),
-                  );
-                },
-              ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15.0),
+          ),
+          clipBehavior: Clip.antiAlias,
+        child: Container(
+          decoration: BoxDecoration(
+              color: Color(0xffff2e63),
             ),
-          ],
+          child: ScrollOnExpand(
+            scrollOnExpand: true,
+            scrollOnCollapse: false,
+            child: ExpandablePanel(
+              theme: const ExpandableThemeData(
+                headerAlignment: ExpandablePanelHeaderAlignment.center,
+                tapBodyToCollapse: true,
+              ),
+              header: Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Text(
+                    widget.day,
+                    style: Theme.of(context).textTheme.body2,
+                  )),
+              collapsed: Container(),
+              expanded: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Container(
+                      height: 750,
+                      child: CustomScrollView(
+                        slivers: <Widget>[
+                          makeHeader('Aerobic Exercises'),
+                          SliverFixedExtentList(
+                            itemExtent: 75,
+                            delegate: SliverChildListDelegate(
+                              [
+                                Excercise(widget.which, 1, 0),
+                                Excercise(widget.which, 2, 1),
+                                Excercise(widget.which, 3, 2),
+                              ],
+                            ),
+                          ),
+                          makeHeader('Resistance Exercises'),
+                          SliverFixedExtentList(
+                            itemExtent: 75,
+                            delegate: SliverChildListDelegate(
+                              [
+                                Excercise(widget.which + 1, 1, 0),
+                                Excercise(widget.which + 1, 2, 1),
+                                Excercise(widget.which + 1, 3, 2),
+                                Excercise(widget.which + 1, 4, 3),
+                              ],
+                            ),
+                          ),
+                          makeHeader('Meditation'),
+                          SliverFixedExtentList(
+                            itemExtent: 75,
+                            delegate: SliverChildListDelegate(
+                              [
+                                Excercise(widget.which + 2, 1, 0),
+                                Excercise(widget.which + 2, 2, 1),
+                                Excercise(widget.which + 2, 3, 2),
+                                Excercise(widget.which + 2, 4, 3),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ))
+                ],
+              ),
+              builder: (_, collapsed, expanded) {
+                return Padding(
+                  padding: EdgeInsets.only(left: 10, right: 10, bottom: 0),
+                  child: Expandable(
+                    collapsed: collapsed,
+                    expanded: expanded,
+                    theme: const ExpandableThemeData(crossFadePoint: 0),
+                  ),
+                );
+              },
+            ),
+          ),
         ),
       ),
     ));
