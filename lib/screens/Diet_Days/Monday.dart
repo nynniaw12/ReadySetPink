@@ -59,7 +59,8 @@ class _MondayState extends State<Monday> {
                 color: const Color(0xFFd888d8),
               ),
                 ),*/
-            color: Color(0xFF7E29B1),
+            //color: Color(0xFF7E29B1),
+            color: Color(0xffff2e63),
             child: Center(
                 child: Text(
               headerText,
@@ -88,7 +89,8 @@ class _MondayState extends State<Monday> {
               Color.fromRGBO(253, 48, 53, 1),
               Color.fromRGBO(126, 41, 177, 1)
             ])*/
-              color: Color(0xFF7E29B1),
+              //color: Color(0xFF7E29B1),
+              color: Color(0xffff2e63),
             ),
             child: Column(
               children: <Widget>[

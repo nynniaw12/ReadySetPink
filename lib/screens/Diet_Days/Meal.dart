@@ -33,7 +33,7 @@ class _MealState extends State<Meal> {
     // NOTE: Calling this function here would crash the app.
     setState(() {
       _bb = widget.bbstart;
-      primaryColor = /*const Color(0xFFffd4e6)*/Color(0xFFFBD0E9);
+      primaryColor = /*const Color(0xFFffd4e6)*//*Color(0xFFFBD0E9)*/Color(0xFFFFC2C2);
       /*if (widget.index % 2 == 0) {
         primaryColor = const Color(0xFFffd4e6);
       } else {
@@ -78,13 +78,13 @@ class _MealState extends State<Meal> {
                 secondaryActions: <Widget>[
                   IconSlideAction(
                     caption: 'Suggest new',
-                    color: Color(0xFF39C732),
+                    color: Color(0xFF993FFF),
                     icon: Icons.more_horiz,
                     onTap: () => suggestNew(),
                   ),
                   IconSlideAction(
                     caption: 'Eaten/Uneaten',
-                    color: Color(0xFFF33D42),
+                    color: Color(0xFFFF722E),
                     icon: Icons.swap_horiz_rounded,
                     onTap: () {
                       setState(() {
