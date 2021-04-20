@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-const kPrimaryColor = Color(0xFFFF7643);
+const kPrimaryColor = Color(0xFFFF722E);
 
 class ProfileMenu extends StatelessWidget {
   const ProfileMenu({
@@ -21,7 +21,7 @@ class ProfileMenu extends StatelessWidget {
       child: FlatButton(
         padding: EdgeInsets.all(20),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-        color: Color(0xFFF5F6F9),
+        color: Colors.white/*Color(0xFFff9d9d)*/,
         onPressed: press,
         child: Row(
           children: [
@@ -32,7 +32,7 @@ class ProfileMenu extends StatelessWidget {
             ),
             SizedBox(width: 20),
             Expanded(
-                child: Text(text, style: TextStyle(color: Colors.grey[600]))),
+                child: Text(text, style: TextStyle(color: Colors.black))),
             Icon(
               Icons.arrow_forward_ios,
               color: Colors.grey[700],

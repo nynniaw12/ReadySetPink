@@ -10,27 +10,24 @@ String enteredTextLogin;
 class _InputEmailState extends State<InputEmail> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 50, left: 50, right: 50),
-      child: Container(
-        height: 60,
-        width: MediaQuery.of(context).size.width,
-        child: TextField(
-          cursorColor: Colors.pink[500],
-          onChanged: (newText) {
-            enteredTextLogin = newText;
-          },
-          style: TextStyle(
+    return Container(
+      height: 60,
+      width: MediaQuery.of(context).size.width,
+      child: TextField(
+        cursorColor: Colors.pink[500],
+        onChanged: (newText) {
+          enteredTextLogin = newText;
+        },
+        style: TextStyle(
+          color: Colors.white,
+        ),
+        decoration: InputDecoration(
+          
+          border: InputBorder.none,
+          fillColor: Colors.lightBlueAccent,
+          labelText: 'Username',
+          labelStyle: TextStyle(
             color: Colors.white,
-          ),
-          decoration: InputDecoration(
-            
-            border: InputBorder.none,
-            fillColor: Colors.lightBlueAccent,
-            labelText: 'Username',
-            labelStyle: TextStyle(
-              color: Colors.white,
-            ),
           ),
         ),
       ),

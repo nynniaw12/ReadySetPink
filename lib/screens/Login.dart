@@ -24,15 +24,31 @@ class _LoginPageState extends State<LoginPage> {
         child: ListView(
           children: <Widget>[
             Column(
+              mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                Row(children: <Widget>[
-                  VerticalText(),
-                  TextLogin(),
-                ]),
-                InputEmail(),
-                PasswordInput(),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: <Widget>[
+                    VerticalText(),
+                    TextLogin(),
+                  ]),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 50),
+                  child: InputEmail(),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 50),
+                  child: PasswordInput(),
+                ),
                 ButtonLogin(),
-                FirstTime(),
+                Padding(
+                  padding: const EdgeInsets.only(left: 50),
+                  child: FirstTime(),
+                ),
               ],
             ),
           ],

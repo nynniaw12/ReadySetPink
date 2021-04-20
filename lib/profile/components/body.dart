@@ -35,6 +35,7 @@ class Body extends StatelessWidget {
               child: Padding(
                   padding: EdgeInsets.only(left: 10),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: 15),

@@ -9,11 +9,12 @@ class _VerticalTextState extends State<VerticalText> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 60, left: 10),
+      padding: const EdgeInsets.only(top: 6.5),
       child: RotatedBox(
-          quarterTurns: -1,
+          quarterTurns: 3,
           child: Text(
             'Sign in',
+            textHeightBehavior: TextHeightBehavior(leadingDistribution: TextLeadingDistribution.even),
             style: TextStyle(
               color: Colors.white,
               fontSize: 38,

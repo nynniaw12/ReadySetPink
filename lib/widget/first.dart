@@ -10,7 +10,7 @@ class _FirstTimeState extends State<FirstTime> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 30, left: 30),
+      padding: const EdgeInsets.only(top: 30),
       child: Container(
         alignment: Alignment.topRight,
         //color: Colors.red,
