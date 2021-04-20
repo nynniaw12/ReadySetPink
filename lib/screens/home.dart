@@ -9,6 +9,7 @@ import 'Login.dart';
 import 'dart:async';
 import 'package:ff_navigation_bar/ff_navigation_bar.dart';
 import 'package:ff_navigation_bar/ff_navigation_bar_theme.dart';
+import 'calendar.dart';
 //import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 class Home extends StatefulWidget {
@@ -31,7 +32,8 @@ class _HomeState extends State<Home> {
   final List<Widget> _children = [
     ExcerciseWidget(),
     HomeWidget(),
-    DietWidget()
+    DietWidget(),
+    CalendarWidget(),
   ];
   void onTabTapped(int index) {
     setState(() {
@@ -199,6 +201,10 @@ class _HomeState extends State<Home> {
                 iconData: Icons.food_bank,
                 label: 'Diet',
               ),
+              FFNavigationBarItem(
+                iconData: Icons.calendar_today,
+                label: 'Calendar',
+              )
             ],
           ),
           /*BottomNavigationBar(
