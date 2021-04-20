@@ -7,6 +7,8 @@ import 'Settings.dart';
 import 'Account.dart';
 import 'Login.dart';
 import 'dart:async';
+import 'package:ff_navigation_bar/ff_navigation_bar.dart';
+import 'package:ff_navigation_bar/ff_navigation_bar_theme.dart';
 //import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 class Home extends StatefulWidget {
@@ -174,7 +176,32 @@ class _HomeState extends State<Home> {
                       },
                     ),
                   ]))),
-          bottomNavigationBar: BottomNavigationBar(
+          bottomNavigationBar: FFNavigationBar(
+            theme: FFNavigationBarTheme(
+              barBackgroundColor: Colors.grey[900],
+              selectedItemBorderColor: Color(0xFF7930A4),
+              selectedItemBackgroundColor: Color(0xFFF33D42),
+              selectedItemIconColor: Colors.white,
+              selectedItemLabelColor: Colors.white,
+            ),
+            selectedIndex: _currentIndex,
+            onSelectTab: onTabTapped,
+            items: [
+              FFNavigationBarItem(
+                iconData: Icons.fitness_center,
+                label: 'Excercises',
+              ),
+              FFNavigationBarItem(
+                iconData: Icons.favorite,
+                label: 'Home',
+              ),
+              FFNavigationBarItem(
+                iconData: Icons.food_bank,
+                label: 'Diet',
+              ),
+            ],
+          ),
+          /*BottomNavigationBar(
             selectedItemColor: Colors.pink[200],
             backgroundColor: Colors.grey[900],
             onTap: onTabTapped, // new
@@ -191,7 +218,7 @@ class _HomeState extends State<Home> {
               new BottomNavigationBarItem(
                   icon: Icon(Icons.food_bank), title: Text('Diet'))
             ],
-          ),
+          ),*/
         ),
         Visibility(
             visible: visibilityMot2,
@@ -233,6 +260,7 @@ class _HomeState extends State<Home> {
         0, 'New Tutorial', 'Local Notification', platform,
         payload: 'AndroidCoding.in');*/
 
-    flutterLocalNotificationsPlatform.show(0,'New Tutorial',  'Local Notification');
+    flutterLocalNotificationsPlatform.show(
+        0, 'New Tutorial', 'Local Notification');
   }
 }

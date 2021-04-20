@@ -1,7 +1,9 @@
 import 'dart:math' as math;
+import 'dart:ui';
 
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
+import 'package:percent_indicator/percent_indicator.dart';
 import 'Meal.dart';
 
 const loremIpsum =
@@ -51,12 +53,13 @@ class _MondayState extends State<Monday> {
         minHeight: 60.0,
         maxHeight: 100.0,
         child: Container(
-            decoration: BoxDecoration(
-              color: const Color(0xFFd888d8),
+            /*decoration: BoxDecoration(
+                color: const Color(0xCF2789),
               border: Border.all(
                 color: const Color(0xFFd888d8),
               ),
-            ),
+                ),*/
+            color: Color(0xFF7E29B1),
             child: Center(
                 child: Text(
               headerText,
@@ -78,7 +81,15 @@ class _MondayState extends State<Monday> {
           clipBehavior: Clip.antiAlias,
           child: Container(
             decoration: BoxDecoration(
-                gradient: LinearGradient(colors: [Colors.green, Colors.blue])),
+              /*gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                  colors: [
+              Color.fromRGBO(253, 48, 53, 1),
+              Color.fromRGBO(126, 41, 177, 1)
+            ])*/
+              color: Color(0xFF7E29B1),
+            ),
             child: Column(
               children: <Widget>[
                 ScrollOnExpand(

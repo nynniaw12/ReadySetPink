@@ -33,7 +33,7 @@ class _MealState extends State<Meal> {
     // NOTE: Calling this function here would crash the app.
     setState(() {
       _bb = widget.bbstart;
-      primaryColor = const Color(0xFFffd4e6);
+      primaryColor = /*const Color(0xFFffd4e6)*/Color(0xFFFBD0E9);
       /*if (widget.index % 2 == 0) {
         primaryColor = const Color(0xFFffd4e6);
       } else {
@@ -59,7 +59,7 @@ class _MealState extends State<Meal> {
                     child: InkWell(
                   child: ListTile(
                     leading: CircleAvatar(
-                      backgroundColor: const Color(0xFFCF268A),
+                      backgroundColor: const Color(0xFFC33187),
                       child: Text('${widget.index}'),
                       foregroundColor: Colors.white,
                     ),
@@ -78,13 +78,13 @@ class _MealState extends State<Meal> {
                 secondaryActions: <Widget>[
                   IconSlideAction(
                     caption: 'Suggest new',
-                    color: Colors.black45,
+                    color: Color(0xFF39C732),
                     icon: Icons.more_horiz,
                     onTap: () => suggestNew(),
                   ),
                   IconSlideAction(
                     caption: 'Eaten/Uneaten',
-                    color: Colors.red,
+                    color: Color(0xFFF33D42),
                     icon: Icons.swap_horiz_rounded,
                     onTap: () {
                       setState(() {
