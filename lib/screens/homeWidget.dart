@@ -46,7 +46,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                         percent: 0.9,
                         center: Text("90.0%"),
                         linearStrokeCap: LinearStrokeCap.roundAll,
-                        progressColor: Colors.greenAccent,
+                        progressColor: Color(0xFF6CEF00),
                       ),
                     ),
                     Padding(
@@ -76,7 +76,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                           fontSize: 17.0),
                                     ))),
                             circularStrokeCap: CircularStrokeCap.round,
-                            progressColor: Colors.purple,
+                            progressColor: Color(0xFF993FFF),
                           ),
                           new Padding(
                             padding: EdgeInsets.symmetric(horizontal: 40.0),
@@ -104,7 +104,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                           fontSize: 17.0),
                                     ))),
                             circularStrokeCap: CircularStrokeCap.round,
-                            progressColor: Colors.purple,
+                            progressColor: Color(0xFF993FFF),
                           ),
                         ],
                       ),
@@ -120,7 +120,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                             lineWidth: 4.0,
                             percent: 0.10,
                             center: new Text("10%"),
-                            progressColor: Colors.red,
+                            progressColor: Color(0xFFE92A5A),
                           ),
                           new Padding(
                             padding: EdgeInsets.symmetric(horizontal: 10.0),
@@ -130,7 +130,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                             lineWidth: 4.0,
                             percent: 0.30,
                             center: new Text("30%"),
-                            progressColor: Colors.orange,
+                            progressColor: Color(0xFFFFAA2E),
                           ),
                           new Padding(
                             padding: EdgeInsets.symmetric(horizontal: 10.0),
@@ -140,7 +140,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                             lineWidth: 4.0,
                             percent: 0.60,
                             center: new Text("60%"),
-                            progressColor: Colors.yellow,
+                            progressColor: Color(0xFFFFEC2E),
                           ),
                           new Padding(
                             padding: EdgeInsets.symmetric(horizontal: 10.0),
@@ -150,7 +150,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                             lineWidth: 4.0,
                             percent: 0.90,
                             center: new Text("90%"),
-                            progressColor: Colors.green,
+                            progressColor: Color(0xFF8DFF2E),
                           ),
                           new Padding(
                             padding: EdgeInsets.symmetric(horizontal: 10.0),
@@ -160,7 +160,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                             lineWidth: 4.0,
                             percent: 0.90,
                             center: new Text("90%"),
-                            progressColor: Colors.green,
+                            progressColor: Color(0xFF7AFF0B),
                           )
                         ],
                       ),
@@ -189,7 +189,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                             lineWidth: 4.0,
                             percent: 0.10,
                             center: new Text("10%"),
-                            progressColor: Colors.red,
+                            progressColor: Color(0xFFE92A5A),
                           ),
                           new Padding(
                             padding: EdgeInsets.symmetric(horizontal: 10.0),
@@ -199,7 +199,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                             lineWidth: 4.0,
                             percent: 0.30,
                             center: new Text("30%"),
-                            progressColor: Colors.orange,
+                            progressColor: Color(0xFFFFAA2E),
                           ),
                           new Padding(
                             padding: EdgeInsets.symmetric(horizontal: 10.0),
@@ -209,7 +209,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                             lineWidth: 4.0,
                             percent: 0.60,
                             center: new Text("60%"),
-                            progressColor: Colors.yellow,
+                            progressColor: Color(0xFFFFEC2E),
                           ),
                           new Padding(
                             padding: EdgeInsets.symmetric(horizontal: 10.0),
@@ -219,7 +219,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                             lineWidth: 4.0,
                             percent: 0.90,
                             center: new Text("90%"),
-                            progressColor: Colors.green,
+                            progressColor: Color(0xFF8DFF2E),
                           ),
                           new Padding(
                             padding: EdgeInsets.symmetric(horizontal: 10.0),
@@ -229,7 +229,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                             lineWidth: 4.0,
                             percent: 0.90,
                             center: new Text("90%"),
-                            progressColor: Colors.green,
+                            progressColor: Color(0xFF7AFF0B),
                           )
                         ],
                       ),

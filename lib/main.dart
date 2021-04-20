@@ -24,8 +24,8 @@ class App extends StatelessWidget {
          ThemeMode.dark for dark theme
       */
       debugShowCheckedModeBanner: false,
-      //home: LoginPage(),
-      home: Home(),
+      home: LoginPage(),
+      //home: Home(),
     );
   }
 }
