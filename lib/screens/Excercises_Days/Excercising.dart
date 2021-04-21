@@ -131,8 +131,22 @@ class _ExcercisingState extends State<Excercising> {
                       progressColor: Colors.greenAccent,
                     )),
                 Padding(padding: EdgeInsets.only(top: 20)),
-                Text(formatTime(_stopwatch.elapsedMilliseconds),
-                    style: TextStyle(fontSize: 48.0)),
+                Padding(
+                  padding: EdgeInsets.zero,
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.black54,
+                        borderRadius: BorderRadius.all(Radius.circular(17.5))),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 2.5),
+                        child: Text(formatTime(_stopwatch.elapsedMilliseconds),
+                            style: TextStyle(fontSize: 48.0)),
+                      ),
+                    ),
+                  ),
+                ),
                 TranslationAnimatedWidget(
                   enabled: this
                       ._enabled2, //update this boolean to forward/reverse the animation
