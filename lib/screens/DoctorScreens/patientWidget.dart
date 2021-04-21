@@ -62,7 +62,7 @@ class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.grey[600],
+      color: Color(0xFFff2e63),
       child: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
@@ -87,7 +87,7 @@ class _LandingPageState extends State<LandingPage> {
                         height: 120,
                         width: MediaQuery.of(context).size.width - 110,
                         decoration: BoxDecoration(
-                            color: Colors.amber,
+                            color: Color(0xFF993FFF),
                             borderRadius: BorderRadius.only(
                               topRight: Radius.circular(15),
                               bottomRight: Radius.circular(15),
@@ -213,12 +213,12 @@ class _LandingPageState extends State<LandingPage> {
                           label: Text('Export'),
                           style: ButtonStyle(
                               backgroundColor: MaterialStateProperty.all<Color>(
-                                  Colors.amber),
+                                  Color(0xFF993FFF)),
                               shape: MaterialStateProperty.all<
                                       RoundedRectangleBorder>(
                                   RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(15.0),
-                                      side: BorderSide(color: Colors.amber)))),
+                                      side: BorderSide(color: Color(0xFF993FFF))))),
                           onPressed: () {},
                         ),
                       ),
@@ -231,12 +231,12 @@ class _LandingPageState extends State<LandingPage> {
                           label: Text('Send Feedback'),
                           style: ButtonStyle(
                               backgroundColor: MaterialStateProperty.all<Color>(
-                                  Colors.amber),
+                                  Color(0xFF993FFF)),
                               shape: MaterialStateProperty.all<
                                       RoundedRectangleBorder>(
                                   RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(15.0),
-                                      side: BorderSide(color: Colors.amber)))),
+                                      side: BorderSide(color: Color(0xFF993FFF))))),
                           onPressed: () {},
                         ),
                       ),

@@ -53,8 +53,8 @@ class TableCell extends StatelessWidget {
     this.onTap,
   })  : cellWidth = cellDimensions.contentCellWidth,
         cellHeight = cellDimensions.contentCellHeight,
-        _colorHorizontalBorder = Colors.amber,
-        _colorVerticalBorder = Colors.black38,
+        _colorHorizontalBorder = Color(0xFF993FFF),
+        _colorVerticalBorder = Color(0xFF993FFF),
         _textAlign = TextAlign.center,
         _padding = EdgeInsets.zero;
 
@@ -62,12 +62,12 @@ class TableCell extends StatelessWidget {
     this.text, {
     this.textStyle,
     this.cellDimensions = CellDimensions.base,
-    this.colorBg = Colors.amber,
+    this.colorBg = const Color(0xFF993FFF),
     this.onTap,
   })  : cellWidth = cellDimensions.stickyLegendWidth,
         cellHeight = cellDimensions.stickyLegendHeight,
         _colorHorizontalBorder = Colors.white,
-        _colorVerticalBorder = Colors.amber,
+        _colorVerticalBorder = Color(0xFF993FFF),
         _textAlign = TextAlign.start,
         _padding = EdgeInsets.only(left: 24.0);
 
@@ -75,12 +75,12 @@ class TableCell extends StatelessWidget {
     this.text, {
     this.textStyle,
     this.cellDimensions = CellDimensions.base,
-    this.colorBg = Colors.amber,
+    this.colorBg = const Color(0xFF993FFF),
     this.onTap,
   })  : cellWidth = cellDimensions.contentCellWidth,
         cellHeight = cellDimensions.stickyLegendHeight,
         _colorHorizontalBorder = Colors.white,
-        _colorVerticalBorder = Colors.amber,
+        _colorVerticalBorder = Color(0xFF993FFF),
         _textAlign = TextAlign.center,
         _padding = EdgeInsets.zero;
 
@@ -92,7 +92,7 @@ class TableCell extends StatelessWidget {
     this.onTap,
   })  : cellWidth = cellDimensions.stickyLegendWidth,
         cellHeight = cellDimensions.contentCellHeight,
-        _colorHorizontalBorder = Colors.amber,
+        _colorHorizontalBorder = Color(0xFF993FFF),
         _colorVerticalBorder = Colors.black38,
         _textAlign = TextAlign.start,
         _padding = EdgeInsets.only(left: 24.0);

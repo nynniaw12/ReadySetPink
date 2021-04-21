@@ -38,7 +38,7 @@ class _HomeDoctorState extends State<HomeDoctor> {
                 colors: [const Color(0xFFff2e63), const Color(0xFFffc2c2)])),
         child: _children[_currentIndex],
       ), // new
-      backgroundColor: const Color(0xFFd74894),
+      backgroundColor: const Color(0xFFff2e63),
       drawer: Container(
           width: 250,
           child: Drawer(
