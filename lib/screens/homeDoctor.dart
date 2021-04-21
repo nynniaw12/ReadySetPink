@@ -45,73 +45,76 @@ class _HomeDoctorState extends State<HomeDoctor> {
               // Add a ListView to the drawer. This ensures the user can scroll
               // through the options in the drawer if there isn't enough vertical
               // space to fit everything.
-              child: ListView(
-                  // Important: Remove any padding from the ListView.
-                  padding: EdgeInsets.zero,
-                  children: <Widget>[
-                Container(
-                  height: 150,
-                  child: DrawerHeader(
-                    child: Padding(
-                        padding: EdgeInsets.only(top: 25),
-                        child: Text(
-                          'Welcome Again!',
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 18),
-                        )),
-                    decoration: BoxDecoration(
-                      color: Colors.pink[500],
+              child: Container(
+            color: Color(0xFF010a43),
+            child: ListView(
+                // Important: Remove any padding from the ListView.
+                padding: EdgeInsets.zero,
+                children: <Widget>[
+                  Container(
+                    height: 150,
+                    child: DrawerHeader(
+                      child: Padding(
+                          padding: EdgeInsets.only(top: 25),
+                          child: Text(
+                            'Welcome Again!',
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 18),
+                          )),
+                      decoration: BoxDecoration(
+                        color: Color(0xFFff2e63),
+                      ),
                     ),
                   ),
-                ),
-                ListTile(
-                  title: Row(
-                    children: [
-                      Icon(Icons.account_box),
-                      Padding(padding: EdgeInsets.only(right: 10)),
-                      Text('Account'),
-                    ],
+                  ListTile(
+                    title: Row(
+                      children: [
+                        Icon(Icons.account_box),
+                        Padding(padding: EdgeInsets.only(right: 10)),
+                        Text('Account'),
+                      ],
+                    ),
+                    onTap: () {
+                      // Update the state of the app
+                      // ...
+                      // Then close the drawer
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Account()),
+                      );
+                    },
                   ),
-                  onTap: () {
-                    // Update the state of the app
-                    // ...
-                    // Then close the drawer
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Account()),
-                    );
-                  },
-                ),
-                ListTile(
-                  title: Row(
-                    children: [
-                      Icon(Icons.settings),
-                      Padding(padding: EdgeInsets.only(right: 10)),
-                      Text('Settings'),
-                    ],
+                  ListTile(
+                    title: Row(
+                      children: [
+                        Icon(Icons.settings),
+                        Padding(padding: EdgeInsets.only(right: 10)),
+                        Text('Settings'),
+                      ],
+                    ),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Settings()),
+                      );
+                    },
                   ),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Settings()),
-                    );
-                  },
-                ),
-                ListTile(
-                  title: Row(
-                    children: [
-                      Icon(Icons.logout),
-                      Padding(padding: EdgeInsets.only(right: 10)),
-                      Text('Sign Out'),
-                    ],
+                  ListTile(
+                    title: Row(
+                      children: [
+                        Icon(Icons.logout),
+                        Padding(padding: EdgeInsets.only(right: 10)),
+                        Text('Sign Out'),
+                      ],
+                    ),
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => LoginPage()));
+                    },
                   ),
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => LoginPage()));
-                  },
-                ),
-              ]))),
+                ]),
+          ))),
       bottomNavigationBar: FFNavigationBar(
         theme: FFNavigationBarTheme(
           barBackgroundColor: Colors.grey[900],
@@ -133,40 +136,6 @@ class _HomeDoctorState extends State<HomeDoctor> {
           ),
         ],
       ),
-      /*BottomNavigationBar(
-            selectedItemColor: Colors.pink[200],
-            backgroundColor: Colors.grey[900],
-            onTap: onTabTapped, // new
-            currentIndex: _currentIndex, // new
-            items: [
-              new BottomNavigationBarItem(
-                icon: Icon(Icons.fitness_center),
-                title: Text('Excercises'),
-              ),
-              new BottomNavigationBarItem(
-                icon: Icon(Icons.favorite),
-                title: Text('Home'),
-              ),
-              new BottomNavigationBarItem(
-                  icon: Icon(Icons.food_bank), title: Text('Diet'))
-            ],
-          ),*/
-      /*BottomNavigationBar(
-        selectedItemColor: Colors.pink[200],
-        backgroundColor: Colors.grey[900],
-        onTap: onTabTapped, // new
-        currentIndex: _currentIndex, // new
-        items: [
-          new BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
-            title: Text('Home'),
-          ),
-          new BottomNavigationBarItem(
-            icon: Icon(Icons.people_alt),
-            title: Text('Patients'),
-          ),
-        ],
-      ),*/
     );
   }
 }

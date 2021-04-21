@@ -88,9 +88,9 @@ class _MealState extends State<Meal> {
                     icon: Icons.swap_horiz_rounded,
                     onTap: () {
                       setState(() {
-                        _colorContainer = _colorContainer == Color(0xFFff83ad)
+                        _colorContainer = _colorContainer == Color(0xFFff9d9d)
                             ? primaryColor
-                            : const Color(0xFFff83ad);
+                            : const Color(0xFFff9d9d);
                       });
                     },
                   ),

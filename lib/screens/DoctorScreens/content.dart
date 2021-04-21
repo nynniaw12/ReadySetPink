@@ -35,7 +35,7 @@ class _ContentState extends State<Content> {
                       child: Container(
                         width: MediaQuery.of(context).size.width,
                         height: 50,
-                        color: Colors.grey[800].withOpacity(0.75),//Değişecek Bura 
+                        color: Color(0xFFff2e63),//Değişecek Bura 
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [

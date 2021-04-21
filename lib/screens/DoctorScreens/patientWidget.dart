@@ -91,7 +91,7 @@ class _LandingPageState extends State<LandingPage> {
                         height: 120,
                         width: MediaQuery.of(context).size.width - 110,
                         decoration: BoxDecoration(
-                            color: Color(0xFF993FFF),
+                            color: Color(0xFFFFA87E),
                             borderRadius: BorderRadius.only(
                               topRight: Radius.circular(15),
                               bottomRight: Radius.circular(15),
@@ -217,13 +217,13 @@ class _LandingPageState extends State<LandingPage> {
                           label: Text('Export'),
                           style: ButtonStyle(
                               backgroundColor: MaterialStateProperty.all<Color>(
-                                  Color(0xFF993FFF)),
+                                  Color(0xFFFFA87E)),
                               shape: MaterialStateProperty.all<
                                       RoundedRectangleBorder>(
                                   RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(15.0),
                                       side: BorderSide(
-                                          color: Color(0xFF993FFF))))),
+                                          color: Color(0xFFFFA87E))))),
                           onPressed: () {},
                         ),
                       ),
@@ -236,13 +236,13 @@ class _LandingPageState extends State<LandingPage> {
                           label: Text('Send Feedback'),
                           style: ButtonStyle(
                               backgroundColor: MaterialStateProperty.all<Color>(
-                                  Color(0xFF993FFF)),
+                                  Color(0xFFFFA87E)),
                               shape: MaterialStateProperty.all<
                                       RoundedRectangleBorder>(
                                   RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(15.0),
                                       side: BorderSide(
-                                          color: Color(0xFF993FFF))))),
+                                          color: Color(0xFFFFA87E))))),
                           onPressed: () {},
                         ),
                       ),

@@ -53,8 +53,8 @@ class TableCell extends StatelessWidget {
     this.onTap,
   })  : cellWidth = cellDimensions.contentCellWidth,
         cellHeight = cellDimensions.contentCellHeight,
-        _colorHorizontalBorder = Color(0xFF993FFF),
-        _colorVerticalBorder = Color(0xFF993FFF),
+        _colorHorizontalBorder = Color(0xFFFFA87E),
+        _colorVerticalBorder = Color(0xFFFFA87E),
         _textAlign = TextAlign.center,
         _padding = EdgeInsets.zero;
 
@@ -62,12 +62,12 @@ class TableCell extends StatelessWidget {
     this.text, {
     this.textStyle,
     this.cellDimensions = CellDimensions.base,
-    this.colorBg = const Color(0xFF993FFF),
+    this.colorBg = const Color(0xFFFFA87E),
     this.onTap,
   })  : cellWidth = cellDimensions.stickyLegendWidth,
         cellHeight = cellDimensions.stickyLegendHeight,
         _colorHorizontalBorder = Colors.white,
-        _colorVerticalBorder = Color(0xFF993FFF),
+        _colorVerticalBorder = Color(0xFFFFA87E),
         _textAlign = TextAlign.start,
         _padding = EdgeInsets.only(left: 24.0);
 
@@ -75,12 +75,12 @@ class TableCell extends StatelessWidget {
     this.text, {
     this.textStyle,
     this.cellDimensions = CellDimensions.base,
-    this.colorBg = const Color(0xFF993FFF),
+    this.colorBg = const Color(0xFFFFA87E),
     this.onTap,
   })  : cellWidth = cellDimensions.contentCellWidth,
         cellHeight = cellDimensions.stickyLegendHeight,
         _colorHorizontalBorder = Colors.white,
-        _colorVerticalBorder = Color(0xFF993FFF),
+        _colorVerticalBorder = Color(0xFFFFA87E),
         _textAlign = TextAlign.center,
         _padding = EdgeInsets.zero;
 
@@ -92,7 +92,7 @@ class TableCell extends StatelessWidget {
     this.onTap,
   })  : cellWidth = cellDimensions.stickyLegendWidth,
         cellHeight = cellDimensions.contentCellHeight,
-        _colorHorizontalBorder = Color(0xFF993FFF),
+        _colorHorizontalBorder = Color(0xFFFFA87E),
         _colorVerticalBorder = Colors.black38,
         _textAlign = TextAlign.start,
         _padding = EdgeInsets.only(left: 24.0);
