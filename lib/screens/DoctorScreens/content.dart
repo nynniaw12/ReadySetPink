@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:flutterexcercisesforcancerapp/screens/DoctorScreens/patientWidget.dart';
+import 'package:flutterexcercisesforcancerapp/screens/DoctorScreens/tablee.dart';
+import 'transition.dart';
 
 class Content extends StatefulWidget {
   final String title;
@@ -17,6 +20,11 @@ class _ContentState extends State<Content> {
           onTap: () {
             print("tappedd");
             print(widget.index);
+
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => LandingPage()),
+            );
           },
           child: Padding(
               padding: EdgeInsets.all(10),
@@ -56,7 +64,7 @@ class _ContentState extends State<Content> {
                       IconSlideAction(
                         caption: 'Export',
                         color: Colors.red,
-                        icon: Icons.import_export,
+                        icon: Icons.save_alt,
                         onTap: () {},
                       ),
                     ],

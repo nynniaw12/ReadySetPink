@@ -37,6 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   settings_ui: ^0.6.0
   flutter_native_splash: ^0.3.2
+  table_sticky_headers: ^2.0.0
+
 
 dev_dependencies:
   flutter_test:
