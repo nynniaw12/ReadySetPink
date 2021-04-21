@@ -33,7 +33,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                           EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                       child: Container(
                         decoration: BoxDecoration(
-                            color: Color(0xFFff2e63),
+                            color: Color(0xFF010a43),
                             borderRadius:
                                 BorderRadius.all(Radius.circular(20))),
                         child: Padding(
@@ -73,7 +73,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                             EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                         child: Container(
                           decoration: BoxDecoration(
-                              color: Color(0xFFff2e63),
+                              color: Color(0xFF010a43),
                               borderRadius:
                                   BorderRadius.all(Radius.circular(20))),
                           child: Padding(
@@ -149,7 +149,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                           EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                       child: Container(
                           decoration: BoxDecoration(
-                              color: Color(0xFFff2e63),
+                              color: Color(0xFF010a43),
                               borderRadius:
                                   BorderRadius.all(Radius.circular(20))),
                           child: Column(

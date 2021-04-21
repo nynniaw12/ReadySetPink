@@ -92,27 +92,27 @@ class CalendarWidgetState extends State<CalendarWidget> {
                   child: Padding(
                     padding: EdgeInsets.only(left: 10, right: 10, bottom: 10),
                     child: TableCalendar(
-                      calendarStyle: const CalendarStyle(
+                      calendarStyle: CalendarStyle(
                         rangeHighlightColor: Color(0xFFff2e63),
                         markerDecoration: const BoxDecoration(
-                          color: Colors.white,
+                          color: Color(0xFFffc2c2),
                         ),
-                        defaultDecoration: const BoxDecoration(
+                        defaultDecoration: BoxDecoration(
                             color: Color(0xFFFF722E), shape: BoxShape.circle),
-                        selectedDecoration: const BoxDecoration(
-                            color: Colors.black54, shape: BoxShape.circle),
-                        todayDecoration: const BoxDecoration(
-                            color: Color(0xFF010A43), shape: BoxShape.circle),
-                        holidayDecoration: const BoxDecoration(
+                        selectedDecoration: BoxDecoration(
+                            color: Colors.white54, shape: BoxShape.circle),
+                        todayDecoration: BoxDecoration(
+                            color: Color(0xFFff2e63), shape: BoxShape.circle, border: Border.all(color: Colors.white, width: 2)),
+                        holidayDecoration: BoxDecoration(
                             color: Color(0xFF6CEF00), shape: BoxShape.circle),
-                        weekendDecoration: const BoxDecoration(
+                        weekendDecoration: BoxDecoration(
                             color: Color(0xFF993FFF), shape: BoxShape.circle),
                         weekendTextStyle: TextStyle(color: Colors.white),
-                        outsideDecoration: const BoxDecoration(
-                            color: Color(0xFFff9d9d), shape: BoxShape.circle),
+                        outsideDecoration: BoxDecoration(
+                            color: Color(0xFF010A43), shape: BoxShape.circle),
                         outsideTextStyle: TextStyle(color: Colors.white),
-                        disabledDecoration: const BoxDecoration(
-                            color: Color(0xFFff9d9d), shape: BoxShape.circle),
+                        disabledDecoration: BoxDecoration(
+                            color: Color(0xFF010A43), shape: BoxShape.circle),
                         disabledTextStyle: TextStyle(color: Colors.white),
                         defaultTextStyle: TextStyle(color: Colors.white),
                       ),
