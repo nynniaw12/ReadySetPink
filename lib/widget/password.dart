@@ -16,7 +16,7 @@ class _PasswordInputState extends State<PasswordInput> {
         height: 60,
         width: MediaQuery.of(context).size.width,
         child: TextField(
-          cursorColor: Colors.pink[500],
+          cursorColor: Colors.white,
           onChanged: (newText) {
             enteredTextPass = newText;
           },
