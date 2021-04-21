@@ -35,7 +35,7 @@ class _ContentState extends State<Content> {
                       child: Container(
                         width: MediaQuery.of(context).size.width,
                         height: 50,
-                        color: Color(0xFFff2e63),//Değişecek Bura 
+                        color: Color(0xFFff2e63), //Değişecek Bura
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -57,7 +57,7 @@ class _ContentState extends State<Content> {
                         IconSlideAction(
                           caption: 'Send Feedback',
                           color: Colors.black45,
-                          icon: Icons.feedback,
+                          icon: Icons.feedback_outlined,
                           onTap: () {},
                         ),
                         IconSlideAction(

@@ -232,7 +232,7 @@ class _LandingPageState extends State<LandingPage> {
                             width: MediaQuery.of(context).size.width * 0.4,
                             height: 45),
                         child: ElevatedButton.icon(
-                          icon: Icon(Icons.feedback, size: 18),
+                          icon: Icon(Icons.feedback_outlined, size: 18),
                           label: Text('Send Feedback'),
                           style: ButtonStyle(
                               backgroundColor: MaterialStateProperty.all<Color>(

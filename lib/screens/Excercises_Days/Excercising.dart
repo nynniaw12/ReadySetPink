@@ -125,7 +125,8 @@ class _ExcercisingState extends State<Excercising> {
                       lineHeight: 20.0,
                       animationDuration: 1000,
                       percent: percentage,
-                      center: Text('the value is $percentage'),
+                      center: Text((percentage * 10).toStringAsFixed(0) +
+                          '/10 seconds done'),
                       linearStrokeCap: LinearStrokeCap.roundAll,
                       progressColor: Colors.greenAccent,
                     )),

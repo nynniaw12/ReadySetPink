@@ -25,7 +25,7 @@ class _ExcerciseState extends State<Excercise> {
     });
   }
 
-  Color _colorContainer = const Color(0xFFffd4e6);
+  Color _colorContainer = const Color(0xFFFFC2C2);
 
   @override
   void initState() {
@@ -51,7 +51,7 @@ class _ExcerciseState extends State<Excercise> {
                 child: InkWell(
               child: ListTile(
                 leading: CircleAvatar(
-                  backgroundColor: const Color(0xFFC33187),
+                  backgroundColor: const Color(0xFFff2e63),
                   child: Text('${widget.index}'),
                   foregroundColor: Colors.white,
                 ),
@@ -81,9 +81,9 @@ class _ExcerciseState extends State<Excercise> {
                 icon: Icons.swap_horiz_rounded,
                 onTap: () {
                   setState(() {
-                    _colorContainer = _colorContainer == Color(0xFFff83ad)
+                    _colorContainer = _colorContainer == Color(0xFFff9d9d)
                         ? const Color(0xFFFFC2C2)
-                        : const Color(0xFFff83ad);
+                        : const Color(0xFFff9d9d);
                   });
                 },
               ),
