@@ -10,7 +10,7 @@ class ExcerciseWidget extends StatelessWidget {
       slivers: <Widget>[
         SliverAppBar(
           title: Text(
-            'The excercises we are suggesting for the week:',
+            'The exercises we are suggesting for the week:',
             style: TextStyle(color: Colors.grey[100], fontSize: 15),
           ),
           // Allows the user to reveal the app bar if they begin scrolling back

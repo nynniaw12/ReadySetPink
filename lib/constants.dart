@@ -145,7 +145,7 @@ List<List<Map<String, dynamic>>> listrecipes = [recipes1, recipes2, recipes3];
 
 List<Map<String, dynamic>> excercises1 = [
   {
-    'name': 'Aerobic Excercise #1',
+    'name': 'Aerobic Exercise #1',
     'img': 'https://source.unsplash.com/3RnkZpDqsEI/2400x1600',
     'ingredients': ['Tomatoes', 'Basil', 'Onion', 'Garlic', 'Pepper'],
     'difficulty': 3,
@@ -155,10 +155,10 @@ List<Map<String, dynamic>> excercises1 = [
     'temp': '3 sets',
     'cooking_type': '5 times each set',
     'shortdesc':
-        'Example short description for aerobic excercise #1  - 0/10 secs done',
+        'Example short description for aerobic exercise #1  - 0/10 secs done',
   },
   {
-    'name': 'Aerobic Excercise #2',
+    'name': 'Aerobic Exercise #2',
     'img': 'source.unsplash.com/2RrBE90w0T8/1920x2879',
     'ingredients': ['Tomatoes', 'Basil', 'Onion', 'Garlic', 'Pepper'],
     'difficulty': 3,
@@ -168,10 +168,10 @@ List<Map<String, dynamic>> excercises1 = [
     'temp': '180 °',
     'cooking_type': 'Oven',
     'shortdesc':
-        'Example short description for aerobic excercise #2 - 0/15 mins done',
+        'Example short description for aerobic exercise #2 - 0/15 mins done',
   },
   {
-    'name': 'Aerobic Excercise #3',
+    'name': 'Aerobic Exercise #3',
     'img': 'source.unsplash.com/2RrBE90w0T8/1920x2879',
     'ingredients': ['Tomatoes', 'Basil', 'Onion', 'Garlic', 'Pepper'],
     'difficulty': 3,
@@ -181,12 +181,12 @@ List<Map<String, dynamic>> excercises1 = [
     'temp': '180 °',
     'cooking_type': 'Oven',
     'shortdesc':
-        'Example short description for aerobic excercise #3 - 0/10 mins done',
+        'Example short description for aerobic exercise #3 - 0/10 mins done',
   },
 ];
 List<Map<String, dynamic>> excercises2 = [
   {
-    'name': 'Resistance Excercise #1',
+    'name': 'Resistance Exercise #1',
     'img': 'source.unsplash.com/2RrBE90w0T8/1920x2879',
     'ingredients': ['Tomatoes', 'Basil', 'Onion', 'Garlic', 'Pepper'],
     'difficulty': 3,
@@ -196,10 +196,10 @@ List<Map<String, dynamic>> excercises2 = [
     'temp': '180 °',
     'cooking_type': 'Oven',
     'shortdesc':
-        'Example short description for resistance excercise #1 - 0/10 mins done',
+        'Example short description for resistance exercise #1 - 0/10 mins done',
   },
   {
-    'name': 'Resistance Excercise #2',
+    'name': 'Resistance Exercise #2',
     'img': 'source.unsplash.com/2RrBE90w0T8/1920x2879',
     'ingredients': ['Tomatoes', 'Basil', 'Onion', 'Garlic', 'Pepper'],
     'difficulty': 3,
@@ -209,10 +209,10 @@ List<Map<String, dynamic>> excercises2 = [
     'temp': '180 °',
     'cooking_type': 'Oven',
     'shortdesc':
-        'Example short description for resistance excercise #2 - 0/10 mins done',
+        'Example short description for resistance exercise #2 - 0/10 mins done',
   },
   {
-    'name': 'Resistance Excercise #3',
+    'name': 'Resistance Exercise #3',
     'img': 'source.unsplash.com/2RrBE90w0T8/1920x2879',
     'ingredients': ['Tomatoes', 'Basil', 'Onion', 'Garlic', 'Pepper'],
     'difficulty': 3,
@@ -222,10 +222,10 @@ List<Map<String, dynamic>> excercises2 = [
     'temp': '180 °',
     'cooking_type': 'Oven',
     'shortdesc':
-        'Example short description for resistance excercise #3 - 0/10 mins done',
+        'Example short description for resistance exercise #3 - 0/10 mins done',
   },
   {
-    'name': 'Resistance Excercise #4',
+    'name': 'Resistance Exercise #4',
     'img': 'source.unsplash.com/2RrBE90w0T8/1920x2879',
     'ingredients': ['Tomatoes', 'Basil', 'Onion', 'Garlic', 'Pepper'],
     'difficulty': 3,
@@ -235,7 +235,7 @@ List<Map<String, dynamic>> excercises2 = [
     'temp': '180 °',
     'cooking_type': 'Oven',
     'shortdesc':
-        'Example short description for resistance excercise #4 - 0/10 mins done',
+        'Example short description for resistance exercise #4 - 0/10 mins done',
   },
 ];
 List<Map<String, dynamic>> excercises3 = [

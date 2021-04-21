@@ -16,14 +16,14 @@ final events = LinkedHashMap<DateTime, List<Event>>(
   hashCode: getHashCode,
 )..addAll({
     DateTime.now(): [
-      Event('Today\'s Event 1'),
-      Event('Today\'s Event 2'),
-      Event('Today\'s Event 3'),
+      Event('Regular Checkup 1'),
+      Event('Regular Checkup 2'),
     ],
     DateTime.utc(2021, 04, 23): [
-      Event('Today\'s Event 1'),
-      Event('Today\'s Event 2'),
-      Event('Today\'s Event 3'),
+      Event('Regular Checkup 3'),
+    ],
+    DateTime.utc(2021, 04, 01): [
+      Event('Regular Checkup 4'),
     ],
   });
 
@@ -100,7 +100,7 @@ class CalendarWidgetState extends State<CalendarWidget> {
                         defaultDecoration: const BoxDecoration(
                             color: Color(0xFFFF722E), shape: BoxShape.circle),
                         selectedDecoration: const BoxDecoration(
-                            color: Color(0xFFff2e63), shape: BoxShape.circle),
+                            color: Colors.black54, shape: BoxShape.circle),
                         todayDecoration: const BoxDecoration(
                             color: Color(0xFF010A43), shape: BoxShape.circle),
                         holidayDecoration: const BoxDecoration(

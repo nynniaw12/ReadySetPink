@@ -97,7 +97,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                       child: Container(
                                           width: 125,
                                           child: new Text(
-                                            "Your excercises this week",
+                                            "Your exercises this week",
                                             textAlign: TextAlign.center,
                                             style: new TextStyle(
                                                 fontWeight: FontWeight.bold,
@@ -217,7 +217,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
-                                    'Your excercises day by day',
+                                    'Your exercises day by day',
                                     textAlign: TextAlign.center,
                                   ),
                                   Padding(
