@@ -14,7 +14,7 @@ class _InputEmailState extends State<InputEmail> {
       height: 60,
       width: MediaQuery.of(context).size.width,
       child: TextField(
-        cursorColor: Colors.pink[500],
+        cursorColor: Colors.white,
         onChanged: (newText) {
           enteredTextLogin = newText;
         },
