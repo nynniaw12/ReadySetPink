@@ -12,7 +12,7 @@ class _TextLoginState extends State<TextLogin> {
       padding: const EdgeInsets.only(left: 5.0),
       child: Text(
         'READY,\nSET,\nPINK!',
-        textHeightBehavior: TextHeightBehavior(leadingDistribution: TextLeadingDistribution.even),
+        //textHeightBehavior: TextHeightBehavior(leadingDistribution: TextLeadingDistribution.even),
         style: TextStyle(
           height: 1,
           fontFamily: 'Barlow',

@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:table_sticky_headers/table_sticky_headers.dart';
 
 class DecoratedTablePage extends StatelessWidget {
-  DecoratedTablePage({this.data, this.titleColumn, this.titleRow});
+  DecoratedTablePage({this.data, this.titleColumn, this.titleRow, this.legend});
 
   final List<List<String>> data;
   final List<String> titleColumn;
   final List<String> titleRow;
+  final String legend;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,7 @@ class DecoratedTablePage extends StatelessWidget {
             rowsLength: titleRow.length,
             columnsTitleBuilder: (i) => TableCell.stickyRow(
               titleColumn[i],
-              textStyle: textTheme.button.copyWith(fontSize: 15.0),
+              textStyle: textTheme.button.copyWith(fontSize: 12.5),
             ),
             rowsTitleBuilder: (i) => TableCell.stickyColumn(
               titleRow[i],
@@ -35,7 +36,7 @@ class DecoratedTablePage extends StatelessWidget {
                   .copyWith(fontSize: 12.0, color: Colors.black),
             ),
             legendCell: TableCell.legend(
-              'Sticky Legend',
+              legend,
               textStyle: textTheme.button.copyWith(fontSize: 16.5),
             ),
           ),

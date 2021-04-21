@@ -1,17 +1,36 @@
 import 'package:flutter/material.dart';
-import 'package:flutterexcercisesforcancerapp/profile/components/profile_pic.dart';
+import 'dart:math';
 import 'decorated_table_page.dart';
 
 class LandingPage extends StatefulWidget {
   final columns = 10;
   final rows = 20;
+  Random random = new Random();
 
   List<List<String>> makeData() {
     final List<List<String>> output = [];
     for (int i = 0; i < columns; i++) {
       final List<String> row = [];
       for (int j = 0; j < rows; j++) {
-        row.add('L$j : T$i');
+        int randomNumber = random.nextInt(45);
+        row.add('$randomNumber Minutes');
+      }
+      output.add(row);
+    }
+    return output;
+  }
+
+  List<List<String>> makeData2() {
+    final List<List<String>> output = [];
+    for (int i = 0; i < columns; i++) {
+      final List<String> row = [];
+      for (int j = 0; j < rows; j++) {
+        int randomNumber = random.nextInt(2);
+        if (randomNumber % 2 == 0) {
+          row.add('Eaten');
+        } else {
+          row.add('Uneaten');
+        }
       }
       output.add(row);
     }
@@ -19,10 +38,13 @@ class LandingPage extends StatefulWidget {
   }
 
   /// Simple generator for column title
-  List<String> makeTitleColumn() => List.generate(columns, (i) => 'Top $i');
+  List<String> makeTitleColumn() =>
+      List.generate(columns, (i) => 'Exercise $i');
+
+  List<String> makeTitleColumn2() => List.generate(columns, (i) => 'Meal $i');
 
   /// Simple generator for row title
-  List<String> makeTitleRow() => List.generate(rows, (i) => 'Left $i');
+  List<String> makeTitleRow() => List.generate(rows, (i) => 'Day $i');
 
   @override
   _LandingPageState createState() => _LandingPageState();
@@ -167,13 +189,15 @@ class _LandingPageState extends State<LandingPage> {
                       titleColumn: widget.makeTitleColumn(),
                       titleRow: widget.makeTitleRow(),
                       data: widget.makeData(),
+                      legend: "Exercises",
                     )),
                 Padding(
                     padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
                     child: DecoratedTablePage(
-                      titleColumn: widget.makeTitleColumn(),
+                      titleColumn: widget.makeTitleColumn2(),
                       titleRow: widget.makeTitleRow(),
-                      data: widget.makeData(),
+                      data: widget.makeData2(),
+                      legend: "Diet",
                     )),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
