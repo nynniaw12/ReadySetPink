@@ -32,37 +32,35 @@ class Body extends StatelessWidget {
             SizedBox(height: 20),
             Padding(
               padding: EdgeInsets.only(top: 5, bottom: 5),
-              child: Padding(
-                  padding: EdgeInsets.only(left: 10),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 15),
-                        child: Container(
-                          height: 1.0,
-                          width: 100.0,
-                          color: Colors.black,
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(bottom: 5),
-                        child: Text(
-                          "Name Surname",
-                          style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 10.0),
-                        child: Container(
-                          height: 1.0,
-                          width: 100,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  )),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 15),
+                    child: Container(
+                      height: 1.0,
+                      width: 100.0,
+                      color: Colors.black,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(bottom: 5),
+                    child: Text(
+                      "Name Surname",
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 10.0),
+                    child: Container(
+                      height: 1.0,
+                      width: 100,
+                      color: Colors.black,
+                    ),
+                  ),
+                ],
+              ),
             ),
             ProfileMenu(
               text: "My Account",
