@@ -84,72 +84,82 @@ class CalendarWidgetState extends State<CalendarWidget> {
           AppBar(
             title: Text("Calendar"),
           ),
-          TableCalendar(
-            calendarStyle: const CalendarStyle(
-              rangeHighlightColor: Color(0xFFff2e63),
-              markerDecoration: const BoxDecoration(
-                color: Colors.white,
-              ),
-              defaultDecoration: const BoxDecoration(
-                  color: Color(0xFFFF722E), shape: BoxShape.circle),
-              selectedDecoration: const BoxDecoration(
-                  color: Color(0xFFff2e63), shape: BoxShape.circle),
-              todayDecoration: const BoxDecoration(
-                  color: Color(0xFF010A43), shape: BoxShape.circle),
-              holidayDecoration: const BoxDecoration(
-                  color: Color(0xFF6CEF00), shape: BoxShape.circle),
-              weekendDecoration: const BoxDecoration(
-                  color: Color(0xFF993FFF), shape: BoxShape.circle),
-              weekendTextStyle: TextStyle(color: Colors.white),
-              outsideDecoration: const BoxDecoration(
-                  color: Color(0xFFff9d9d), shape: BoxShape.circle),
-              outsideTextStyle: TextStyle(color: Colors.white),
-              disabledDecoration: const BoxDecoration(
-                  color: Color(0xFFff9d9d), shape: BoxShape.circle),
-              disabledTextStyle: TextStyle(color: Colors.white),
-              defaultTextStyle: TextStyle(color: Colors.white),
-            ),
-            firstDay: kFirstDay,
-            lastDay: kLastDay,
-            focusedDay: _focusedDay,
-            calendarFormat: _calendarFormat,
-            eventLoader: (day) {
-              return _getEventsForDay(day);
-            },
-            selectedDayPredicate: (day) {
-              // Use `selectedDayPredicate` to determine which day is currently selected.
-              // If this returns true, then `day` will be marked as selected.
+          Padding(
+              padding: EdgeInsets.only(top: 25, left: 12.5, right: 12.5),
+              child: Container(
+                  decoration: BoxDecoration(
+                      color: Color(0xFFff2e63),
+                      borderRadius: BorderRadius.all(Radius.circular(20))),
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 10, right: 10, bottom: 10),
+                    child: TableCalendar(
+                      calendarStyle: const CalendarStyle(
+                        rangeHighlightColor: Color(0xFFff2e63),
+                        markerDecoration: const BoxDecoration(
+                          color: Colors.white,
+                        ),
+                        defaultDecoration: const BoxDecoration(
+                            color: Color(0xFFFF722E), shape: BoxShape.circle),
+                        selectedDecoration: const BoxDecoration(
+                            color: Color(0xFFff2e63), shape: BoxShape.circle),
+                        todayDecoration: const BoxDecoration(
+                            color: Color(0xFF010A43), shape: BoxShape.circle),
+                        holidayDecoration: const BoxDecoration(
+                            color: Color(0xFF6CEF00), shape: BoxShape.circle),
+                        weekendDecoration: const BoxDecoration(
+                            color: Color(0xFF993FFF), shape: BoxShape.circle),
+                        weekendTextStyle: TextStyle(color: Colors.white),
+                        outsideDecoration: const BoxDecoration(
+                            color: Color(0xFFff9d9d), shape: BoxShape.circle),
+                        outsideTextStyle: TextStyle(color: Colors.white),
+                        disabledDecoration: const BoxDecoration(
+                            color: Color(0xFFff9d9d), shape: BoxShape.circle),
+                        disabledTextStyle: TextStyle(color: Colors.white),
+                        defaultTextStyle: TextStyle(color: Colors.white),
+                      ),
+                      firstDay: kFirstDay,
+                      lastDay: kLastDay,
+                      focusedDay: _focusedDay,
+                      calendarFormat: _calendarFormat,
+                      eventLoader: (day) {
+                        return _getEventsForDay(day);
+                      },
+                      selectedDayPredicate: (day) {
+                        // Use `selectedDayPredicate` to determine which day is currently selected.
+                        // If this returns true, then `day` will be marked as selected.
 
-              // Using `isSameDay` is recommended to disregard
-              // the time-part of compared DateTime objects.
-              return isSameDay(_selectedDay, day);
-            },
-            onDaySelected: (selectedDay, focusedDay) {
-              if (!isSameDay(_selectedDay, selectedDay)) {
-                // Call `setState()` when updating the selected day
-                setState(() {
-                  _selectedDay = selectedDay;
-                  _focusedDay = focusedDay;
-                });
-              }
-              _selectedEvents.value = _getEventsForDay(selectedDay);
-              print(_selectedEvents);
-            },
-            onFormatChanged: (format) {
-              if (_calendarFormat != format) {
-                // Call `setState()` when updating calendar format
-                setState(() {
-                  _calendarFormat = format;
-                });
-              }
-            },
-            onPageChanged: (focusedDay) {
-              // No need to call `setState()` here
-              _focusedDay = focusedDay;
-            },
-          ),
+                        // Using `isSameDay` is recommended to disregard
+                        // the time-part of compared DateTime objects.
+                        return isSameDay(_selectedDay, day);
+                      },
+                      onDaySelected: (selectedDay, focusedDay) {
+                        if (!isSameDay(_selectedDay, selectedDay)) {
+                          // Call `setState()` when updating the selected day
+                          setState(() {
+                            _selectedDay = selectedDay;
+                            _focusedDay = focusedDay;
+                          });
+                        }
+                        _selectedEvents.value = _getEventsForDay(selectedDay);
+                        print(_selectedEvents);
+                      },
+                      onFormatChanged: (format) {
+                        if (_calendarFormat != format) {
+                          // Call `setState()` when updating calendar format
+                          setState(() {
+                            _calendarFormat = format;
+                          });
+                        }
+                      },
+                      onPageChanged: (focusedDay) {
+                        // No need to call `setState()` here
+                        _focusedDay = focusedDay;
+                      },
+                    ),
+                  ))),
           const SizedBox(height: 8.0),
           Expanded(
+            flex: 1,
             child: ValueListenableBuilder<List<Event>>(
               valueListenable: _selectedEvents,
               builder: (context, value, _) {
@@ -160,7 +170,7 @@ class CalendarWidgetState extends State<CalendarWidget> {
                     return Container(
                       clipBehavior: Clip.hardEdge,
                       margin: const EdgeInsets.symmetric(
-                        horizontal: 12.0,
+                        horizontal: 12.5,
                         vertical: 4.0,
                       ),
                       decoration: BoxDecoration(

@@ -62,7 +62,11 @@ class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color(0xFFff2e63),
+      decoration: BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment.bottomLeft,
+              end: Alignment.topRight,
+              colors: [const Color(0xFFff2e63), const Color(0xFFffc2c2)])),
       child: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
@@ -218,7 +222,8 @@ class _LandingPageState extends State<LandingPage> {
                                       RoundedRectangleBorder>(
                                   RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(15.0),
-                                      side: BorderSide(color: Color(0xFF993FFF))))),
+                                      side: BorderSide(
+                                          color: Color(0xFF993FFF))))),
                           onPressed: () {},
                         ),
                       ),
@@ -236,7 +241,8 @@ class _LandingPageState extends State<LandingPage> {
                                       RoundedRectangleBorder>(
                                   RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(15.0),
-                                      side: BorderSide(color: Color(0xFF993FFF))))),
+                                      side: BorderSide(
+                                          color: Color(0xFF993FFF))))),
                           onPressed: () {},
                         ),
                       ),
