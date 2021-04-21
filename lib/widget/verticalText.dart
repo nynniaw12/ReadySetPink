@@ -14,7 +14,7 @@ class _VerticalTextState extends State<VerticalText> {
           quarterTurns: 3,
           child: Text(
             'Sign in',
-            textHeightBehavior: TextHeightBehavior(leadingDistribution: TextLeadingDistribution.even),
+            //textHeightBehavior: TextHeightBehavior(leadingDistribution: TextLeadingDistribution.even),
             style: TextStyle(
               color: Colors.white,
               fontSize: 38,

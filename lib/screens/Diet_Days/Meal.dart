@@ -59,7 +59,7 @@ class _MealState extends State<Meal> {
                     child: InkWell(
                   child: ListTile(
                     leading: CircleAvatar(
-                      backgroundColor: const Color(0xFFC33187),
+                      backgroundColor: const Color(0xFFff2e63),
                       child: Text('${widget.index}'),
                       foregroundColor: Colors.white,
                     ),

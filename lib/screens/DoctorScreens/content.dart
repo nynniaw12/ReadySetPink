@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:flutterexcercisesforcancerapp/screens/DoctorScreens/patientWidget.dart';
-import 'package:flutterexcercisesforcancerapp/screens/DoctorScreens/tablee.dart';
-import 'transition.dart';
+//import 'package:flutterexcercisesforcancerapp/screens/DoctorScreens/tablee.dart';
+//import 'transition.dart';
 
 class Content extends StatefulWidget {
   final String title;
