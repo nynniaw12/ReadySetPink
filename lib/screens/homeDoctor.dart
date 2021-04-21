@@ -1,3 +1,5 @@
+import 'package:ff_navigation_bar/ff_navigation_bar.dart';
+import 'package:ff_navigation_bar/ff_navigation_bar_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterexcercisesforcancerapp/screens/DoctorScreens/patientsWidgetDoctor.dart';
 import 'Settings.dart';
@@ -30,10 +32,13 @@ class _HomeDoctorState extends State<HomeDoctor> {
       body: Container(
         alignment: Alignment.center,
         decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.bottomLeft,
-                end: Alignment.topRight,
-                colors: [const Color(0xFFCF268A), const Color(0xFFFB8CAB)])),
+                gradient: LinearGradient(
+                    begin: Alignment.bottomLeft,
+                    end: Alignment.topRight,
+                    colors: [
+                  const Color(0xFFff2e63),
+                  const Color(0xFFffc2c2)
+                ])),
         child: _children[_currentIndex],
       ), // new
       backgroundColor: const Color(0xFFd74894),
@@ -110,7 +115,47 @@ class _HomeDoctorState extends State<HomeDoctor> {
                   },
                 ),
               ]))),
-      bottomNavigationBar: BottomNavigationBar(
+      bottomNavigationBar: 
+      FFNavigationBar(
+            theme: FFNavigationBarTheme(
+              barBackgroundColor: Colors.grey[900],
+              selectedItemBorderColor: Color(0xFF5D0170),
+              selectedItemBackgroundColor: Color(0xFFff2e63),
+              selectedItemIconColor: Colors.white,
+              selectedItemLabelColor: Colors.white,
+            ),
+            selectedIndex: _currentIndex,
+            onSelectTab: onTabTapped,
+            items: [
+              FFNavigationBarItem(
+                iconData: Icons.fitness_center,
+                label: 'Excercises',
+              ),
+              FFNavigationBarItem(
+                iconData: Icons.favorite,
+                label: 'Home',
+              ),
+            ],
+          ),
+          /*BottomNavigationBar(
+            selectedItemColor: Colors.pink[200],
+            backgroundColor: Colors.grey[900],
+            onTap: onTabTapped, // new
+            currentIndex: _currentIndex, // new
+            items: [
+              new BottomNavigationBarItem(
+                icon: Icon(Icons.fitness_center),
+                title: Text('Excercises'),
+              ),
+              new BottomNavigationBarItem(
+                icon: Icon(Icons.favorite),
+                title: Text('Home'),
+              ),
+              new BottomNavigationBarItem(
+                  icon: Icon(Icons.food_bank), title: Text('Diet'))
+            ],
+          ),*/      
+      /*BottomNavigationBar(
         selectedItemColor: Colors.pink[200],
         backgroundColor: Colors.grey[900],
         onTap: onTabTapped, // new
@@ -125,7 +170,7 @@ class _HomeDoctorState extends State<HomeDoctor> {
             title: Text('Patients'),
           ),
         ],
-      ),
+      ),*/
     );
   }
 }

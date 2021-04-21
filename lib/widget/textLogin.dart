@@ -9,27 +9,15 @@ class _TextLoginState extends State<TextLogin> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 30.0, left: 20.0),
-      child: Container(
-        //color: Colors.green,
-        height: 200,
-        width: 300,
-        child: Column(
-          children: <Widget>[
-            Container(
-              height: 45,
-            ),
-            Center(
-              child: Text(
-                'READY, SET, PINK!',
-                style: TextStyle(
-                  fontFamily: 'Barlow',
-                  fontSize: 64,
-                  color: Colors.pink[500],
-                ),
-              ),
-            ),
-          ],
+      padding: const EdgeInsets.only(left: 5.0),
+      child: Text(
+        'READY,\nSET,\nPINK!',
+        textHeightBehavior: TextHeightBehavior(leadingDistribution: TextLeadingDistribution.even),
+        style: TextStyle(
+          height: 1,
+          fontFamily: 'Barlow',
+          fontSize: 64,
+          color: Color(0xFFff2e63),
         ),
       ),
     );

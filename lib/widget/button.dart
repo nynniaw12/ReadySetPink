@@ -15,7 +15,6 @@ class _ButtonLoginState extends State<ButtonLogin> {
     return Padding(
       padding: const EdgeInsets.only(top: 40, right: 50, left: 50),
       child: Container(
-        alignment: Alignment.bottomRight,
         height: 50,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
@@ -46,6 +45,7 @@ class _ButtonLoginState extends State<ButtonLogin> {
           },
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Text(
                 'OK',

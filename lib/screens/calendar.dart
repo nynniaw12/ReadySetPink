@@ -85,6 +85,30 @@ class CalendarWidgetState extends State<CalendarWidget> {
             title: Text("Calendar"),
           ),
           TableCalendar(
+            calendarStyle: const CalendarStyle(
+              rangeHighlightColor: Color(0xFFff2e63),
+              markerDecoration: const BoxDecoration(
+                color: Colors.white,
+              ),
+              defaultDecoration: const BoxDecoration(
+                  color: Color(0xFFFF722E), shape: BoxShape.circle),
+              selectedDecoration: const BoxDecoration(
+                  color: Color(0xFFff2e63), shape: BoxShape.circle),
+              todayDecoration: const BoxDecoration(
+                  color: Color(0xFF010A43), shape: BoxShape.circle),
+              holidayDecoration: const BoxDecoration(
+                  color: Color(0xFF6CEF00), shape: BoxShape.circle),
+              weekendDecoration: const BoxDecoration(
+                  color: Color(0xFF993FFF), shape: BoxShape.circle),
+              weekendTextStyle: TextStyle(color: Colors.white),
+              outsideDecoration: const BoxDecoration(
+                  color: Color(0xFFff9d9d), shape: BoxShape.circle),
+              outsideTextStyle: TextStyle(color: Colors.white),
+              disabledDecoration: const BoxDecoration(
+                  color: Color(0xFFff9d9d), shape: BoxShape.circle),
+              disabledTextStyle: TextStyle(color: Colors.white),
+              defaultTextStyle: TextStyle(color: Colors.white),
+            ),
             firstDay: kFirstDay,
             lastDay: kLastDay,
             focusedDay: _focusedDay,
@@ -134,17 +158,24 @@ class CalendarWidgetState extends State<CalendarWidget> {
                   itemBuilder: (context, index) {
                     final item = '${value[index]}';
                     return Container(
+                      clipBehavior: Clip.hardEdge,
                       margin: const EdgeInsets.symmetric(
                         horizontal: 12.0,
                         vertical: 4.0,
                       ),
                       decoration: BoxDecoration(
+                        color: Color(0xFF010A43),
                         border: Border.all(),
                         borderRadius: BorderRadius.circular(12.0),
                       ),
                       child: Dismissible(
+                        background: Container(color: Color(0xFF6CEF00)),
+                        secondaryBackground:
+                            Container(color: Color(0xFFff2e63)),
                         key: Key(item),
-                        child: Text('${value[index]}'),
+                        child: Container(
+                            margin: EdgeInsets.all(10),
+                            child: Text('${value[index]}')),
                         onDismissed: (direction) {
                           setState(() {
                             value.removeAt(index);

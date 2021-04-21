@@ -92,15 +92,15 @@ class _HomeState extends State<Home> {
         Scaffold(
           body: Container(
             alignment: Alignment.center,
-            /*decoration: BoxDecoration(
+            decoration: BoxDecoration(
                 gradient: LinearGradient(
                     begin: Alignment.bottomLeft,
                     end: Alignment.topRight,
                     colors: [
-                  const Color(0xFFCF268A),
-                  const Color(0xFFFB8CAB)
-                ])),*/
-            color: const Color(0xFF010a43) /*Colors.grey[900]*/,
+                  const Color(0xFFff2e63),
+                  const Color(0xFFffc2c2)
+                ])),
+            //color: const Color(0xFF010a43) /*Colors.grey[900]*/,
             child: _children[_currentIndex],
           ), // new
           backgroundColor: const Color(0xFFd74894),
